@@ -21,19 +21,24 @@ namespace BookStore
         {
 
         }
-        private void login_Click(object sender, EventArgs e)
+        private void home_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_Click_1(object sender, EventArgs e)
         {
             login log = new login();
             log.Show();
         }
 
-        private void signup_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             signup sign = new signup();
             sign.Show();
         }
 
-        private void home_Load(object sender, EventArgs e)
+        private void loginadmin_Click(object sender, EventArgs e)
         {
 
         }

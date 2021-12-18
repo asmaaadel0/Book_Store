@@ -17,12 +17,6 @@ namespace BookStore
         {
             InitializeComponent();
         }
-
-        private void login_Click(object sender, EventArgs e)
-        {
-            home log = new home();
-            log.Show();
-        }
         private void loginbutton_Click(object sender, EventArgs e)
         {
 
@@ -54,6 +48,7 @@ namespace BookStore
                 if (usernametextbox.Text == "")
                 {
                     usernametextbox.Text = "Enter User name";
+                    usernametextbox.ForeColor = Color.Gray;
                     return;
                 }
                 usernametextbox.ForeColor = Color.White;
@@ -69,6 +64,7 @@ namespace BookStore
                 if (passwordtextBox.Text == "")
                 {
                     passwordtextBox.Text = "Password";
+                    passwordtextBox.ForeColor = Color.Gray;
                     return;
                 }
                 passwordtextBox.ForeColor = Color.White;
@@ -131,6 +127,8 @@ namespace BookStore
                 passwordtextBox.Focus();
                 return;
             }
+            Form1 home = new Form1();
+            home.Show();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

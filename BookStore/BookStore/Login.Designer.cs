@@ -32,6 +32,7 @@ namespace BookStore
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.loginlogo = new System.Windows.Forms.Panel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
@@ -53,7 +54,6 @@ namespace BookStore
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.loginlogo.SuspendLayout();
@@ -86,6 +86,18 @@ namespace BookStore
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(234, 454);
             this.logo.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(15, 80);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(203, 31);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "BOOK STORE";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // pictureBox3
             // 
@@ -319,18 +331,6 @@ namespace BookStore
             this.label2.TabIndex = 1;
             this.label2.Text = "User Name";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(15, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(203, 31);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "BOOK STORE";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,7 +341,6 @@ namespace BookStore
             this.Controls.Add(this.logo);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "Login";
