@@ -141,12 +141,12 @@ namespace BookStore
             // 
             // loginbutton
             // 
-            this.loginbutton.FlatAppearance.BorderColor = System.Drawing.Color.LimeGreen;
+            this.loginbutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.loginbutton.FlatAppearance.BorderSize = 2;
-            this.loginbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.loginbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.loginbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbutton.ForeColor = System.Drawing.Color.Lime;
+            this.loginbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.loginbutton.Location = new System.Drawing.Point(247, 358);
             this.loginbutton.Name = "loginbutton";
             this.loginbutton.Size = new System.Drawing.Size(191, 32);

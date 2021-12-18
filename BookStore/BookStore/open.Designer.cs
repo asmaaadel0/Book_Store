@@ -58,12 +58,12 @@ namespace BookStore
             // 
             // loginadmin
             // 
-            this.loginadmin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.loginadmin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.loginadmin.FlatAppearance.BorderSize = 2;
-            this.loginadmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.loginadmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.loginadmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginadmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginadmin.ForeColor = System.Drawing.Color.Lime;
+            this.loginadmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.loginadmin.Location = new System.Drawing.Point(399, 414);
             this.loginadmin.Name = "loginadmin";
             this.loginadmin.Size = new System.Drawing.Size(116, 31);
@@ -74,12 +74,12 @@ namespace BookStore
             // 
             // signupbutton
             // 
-            this.signupbutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.signupbutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.signupbutton.FlatAppearance.BorderSize = 2;
-            this.signupbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.signupbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.signupbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signupbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signupbutton.ForeColor = System.Drawing.Color.Lime;
+            this.signupbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.signupbutton.Location = new System.Drawing.Point(445, 6);
             this.signupbutton.Name = "signupbutton";
             this.signupbutton.Size = new System.Drawing.Size(85, 31);
@@ -90,12 +90,12 @@ namespace BookStore
             // 
             // loginbutton
             // 
-            this.loginbutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.loginbutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.loginbutton.FlatAppearance.BorderSize = 2;
-            this.loginbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.loginbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.loginbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbutton.ForeColor = System.Drawing.Color.Lime;
+            this.loginbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.loginbutton.Location = new System.Drawing.Point(358, 6);
             this.loginbutton.Name = "loginbutton";
             this.loginbutton.Size = new System.Drawing.Size(85, 31);

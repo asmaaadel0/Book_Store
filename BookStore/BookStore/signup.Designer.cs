@@ -152,12 +152,12 @@ namespace BookStore
             // 
             // signupbutton
             // 
-            this.signupbutton.FlatAppearance.BorderColor = System.Drawing.Color.LimeGreen;
+            this.signupbutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.signupbutton.FlatAppearance.BorderSize = 2;
-            this.signupbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.signupbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.signupbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signupbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signupbutton.ForeColor = System.Drawing.Color.Lime;
+            this.signupbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.signupbutton.Location = new System.Drawing.Point(614, 437);
             this.signupbutton.Name = "signupbutton";
             this.signupbutton.Size = new System.Drawing.Size(191, 32);
