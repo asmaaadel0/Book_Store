@@ -140,7 +140,6 @@ namespace BookStore
                 MessageBox.Show("you signed up successfully!");
             }
         }
-
         private void emailtextBox_TextChanged(object sender, EventArgs e)
         {
             try
