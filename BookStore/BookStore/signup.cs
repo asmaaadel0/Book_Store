@@ -108,21 +108,26 @@ namespace BookStore
             if (firstnametextBox.Text == "First Name" || lastnametextBox.Text == "Last Name")
             {
                 panel30.Visible = true;
+                firstnametextBox.Focus();
+                lastnametextBox.Focus();
                 return;
             }
             if (isusername(usernametextbox.Text))
             {
                 panel5.Visible = true;
+                usernametextbox.Focus();
                 return;
             }
             if (emailtextBox.Text == "E-mail")
             {
                 panel10.Visible = true;
+                emailtextBox.Focus();
                 return;
             }
             if (passwordtextBox.Text == "Password")
             {
                 panel8.Visible = true;
+                passwordtextBox.Focus();
                 return;
             }
             int result = controllerObj.signupform(firstnametextBox.Text, lastnametextBox.Text, usernametextbox.Text, passwordtextBox.Text, emailtextBox.Text, statetextBox.Text, citytextBox.Text, districttextBox.Text, streettextBox.Text, Int16.Parse(housenumbertextBox.Text), postalnumbertextBox.Text, countrycodetextBox.Text, phonenumbertextBox.Text);

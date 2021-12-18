@@ -61,13 +61,8 @@ namespace BookStore
         {
             try
             {
-                if (passwordtextBox.Text == "")
-                {
-                    passwordtextBox.Text = "Password";
-                    passwordtextBox.ForeColor = Color.Gray;
-                    return;
-                }
                 passwordtextBox.ForeColor = Color.White;
+                passwordtextBox.PasswordChar = '*';
                 panel7.Visible = false;
             }
             catch { }
