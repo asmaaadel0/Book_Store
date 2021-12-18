@@ -80,12 +80,12 @@ namespace BookStore
 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            loginbutton.ForeColor = Color.Black;
+
         }
 
         private void loginbutton_MouseLeave(object sender, EventArgs e)
         {
-            loginbutton.ForeColor = Color.Lime;
+
         }
         public bool isusername(string username)
         {
