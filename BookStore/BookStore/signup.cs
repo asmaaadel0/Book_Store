@@ -11,6 +11,9 @@ namespace BookStore
 {
     public partial class signup : Form
     {
+        private Button currentbutton;
+        private Random random;
+        private int tempIndex;
         Controller controllerObj;
         public signup()
         {
@@ -19,7 +22,7 @@ namespace BookStore
         private void signup_Load(object sender, EventArgs e)
         {
             controllerObj = new Controller();
-        }
+        }        
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 

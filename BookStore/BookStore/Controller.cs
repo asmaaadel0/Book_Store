@@ -26,6 +26,11 @@ namespace BookStore
             string query = "select username from Users;";
                 return dbMan.ExecuteReader(query);
         }
+        public string passwordofusername(string username)
+        {
+            string query = "select PW from Users where username=" + "'" + username + "';";
+            return (string)dbMan.ExecuteScalar(query);
+        }
 
         public void TerminateConnection()
         {
