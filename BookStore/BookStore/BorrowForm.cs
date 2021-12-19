@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace BookStore
 {
-    public partial class BuyForm : Form
+    public partial class BorrowForm: Form
     {
         private Form activeForm;
         private Button currentButton;
 
-        public BuyForm()
+        public BorrowForm()
         {
             InitializeComponent();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
@@ -64,19 +64,9 @@ namespace BookStore
             LoadTheme();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //OpenChildForm(new BookDetails());
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new BookDetails());
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -86,7 +76,7 @@ namespace BookStore
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                OpenChildForm(new BookDetails());
+                OpenChildForm(new BorrowedBookDetails());
             }
         }
 
