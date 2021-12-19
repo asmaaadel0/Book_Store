@@ -15,10 +15,10 @@ namespace BookStore
         {
             dbMan = new DBManager();
         }
-        public int signupform(string fname, string lname, string username, string password, string email, string state, string city, string district, string street, int housnumber, string postalnum, string countrycode, string phonenumber)
+        public int signupform(string fname, string lname, string username, string password, string email, string state, string city, string district, string street, string housnumber, string postalnum, string countrycode, string phonenumber)
         {
             string query = "insert into Users (Fname,Lname,username,PW,email,stat,city,district,street,HouseNumber,postalNumber,countrycode,PhoneNumber)" +
-                            "values('" + fname + "','" + lname + "','" + username + "','" + password+ "','" + email + "','" + state + "','" + city + "','" + district + "','" + street + "'," + housnumber + ",'" + postalnum + "','" + countrycode +"','"+ phonenumber + "');";
+                            "values('" + fname + "','" + lname + "','" + username + "','" + password+ "','" + email + "','" + state + "','" + city + "','" + district + "','" + street + "','" + housnumber + "','" + postalnum + "','" + countrycode +"','"+ phonenumber + "');";
             return dbMan.ExecuteNonQuery(query);
         }
         public DataTable usernames()
@@ -26,9 +26,19 @@ namespace BookStore
             string query = "select username from Users;";
                 return dbMan.ExecuteReader(query);
         }
+        public DataTable usernameadmin()
+        {
+            string query = "select username from Admins;";
+            return dbMan.ExecuteReader(query);
+        }
         public string passwordofusername(string username)
         {
             string query = "select PW from Users where username=" + "'" + username + "';";
+            return (string)dbMan.ExecuteScalar(query);
+        }
+        public string passwordofusernameadmin(string username)
+        {
+            string query = "select PW from Admins where username=" + "'" + username + "';";
             return (string)dbMan.ExecuteScalar(query);
         }
 

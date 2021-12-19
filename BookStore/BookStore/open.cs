@@ -42,6 +42,13 @@ namespace BookStore
 
         private void loginadmin_Click(object sender, EventArgs e)
         {
+            LoginAdmin log = new LoginAdmin();
+            log.Show();
+            this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

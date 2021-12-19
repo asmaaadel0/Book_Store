@@ -16,8 +16,13 @@ namespace BookStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             //Application.Run(new home());
             Application.Run(new Form1());
+=======
+            Application.Run(new home());
+            //Application.Run(new BuyForm());
+>>>>>>> e5fa2134af13ecce6a8943c38f5e8533881585cb
         }
     }
 }
