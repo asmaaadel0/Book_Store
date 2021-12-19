@@ -124,12 +124,14 @@ namespace BookStore
             }
             Form1 home = new Form1();
             home.Show();
+            this.Hide();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             signup sign = new signup();
             sign.Show();
+            this.Hide();
         }
 
         private void label6_Click(object sender, EventArgs e)

@@ -30,12 +30,14 @@ namespace BookStore
         {
             login log = new login();
             log.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             signup sign = new signup();
             sign.Show();
+            this.Hide();
         }
 
         private void loginadmin_Click(object sender, EventArgs e)

@@ -87,6 +87,7 @@ namespace BookStore
         {
             login log = new login();
             log.Show();
+            this.Hide();
         }
 
         private void panel21_Paint(object sender, PaintEventArgs e)
