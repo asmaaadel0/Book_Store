@@ -142,18 +142,18 @@ namespace BookStore
 
         private void BorrowBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new BorrowForm(), sender);
+            OpenChildForm(new BuyForm(), sender);
 
         }
 
         private void TakeBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FreeForm(), sender);
+            OpenChildForm(new BuyForm(), sender);
 
         }
 
 
-        public void btnCloseChildForm_Click(object sender, EventArgs e)
+        private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
             if (activeForm != null)
                 activeForm.Close();

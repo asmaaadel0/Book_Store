@@ -207,9 +207,9 @@
             this.btnCloseChildForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCloseChildForm.Location = new System.Drawing.Point(16, 38);
             this.btnCloseChildForm.Name = "btnCloseChildForm";
-            this.btnCloseChildForm.Size = new System.Drawing.Size(81, 26);
+            this.btnCloseChildForm.Size = new System.Drawing.Size(40, 26);
             this.btnCloseChildForm.TabIndex = 1;
-            this.btnCloseChildForm.Text = "BackHome";
+            this.btnCloseChildForm.Text = "X";
             this.btnCloseChildForm.UseVisualStyleBackColor = false;
             this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
             // 
@@ -236,6 +236,7 @@
             // 
             // pictureBox1
             // 
+            //this.pictureBox1.Image = global::BookStore.Properties.Resources.Here_is_a_theater_to_unfold_an_outstanding_drama__and_the_characters_are_book_lovers_sitting_on_the_soft_couch_or_standing_beside_the_bookshelves__0004;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(2000, 1334);

@@ -33,8 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,24 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BookDetails.Designer.cs">
-      <DependentUpon>BookDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BorrowedBookDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BorrowedBookDetails.designer.cs">
-      <DependentUpon>BorrowedBookDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BorrowForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BorrowForm.Designer.cs">
-      <DependentUpon>BorrowForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="BuyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,25 +60,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="FreeBookDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FreeBookDetails.designer.cs">
-      <DependentUpon>FreeBookDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FreeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FreeForm.designer.cs">
-      <DependentUpon>FreeForm.cs</DependentUpon>
-=======
     <Compile Include="LoginAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginAdmin.Designer.cs">
       <DependentUpon>LoginAdmin.cs</DependentUpon>
->>>>>>> e5fa2134af13ecce6a8943c38f5e8533881585cb
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -123,26 +89,11 @@
     <Compile Include="StoredProcedures.cs" />
     <Compile Include="ThemeColor.cs" />
     <Compile Include="ValidationClass.cs" />
-    <EmbeddedResource Include="BookDetails.resx">
-      <DependentUpon>BookDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BorrowedBookDetails.resx">
-      <DependentUpon>BorrowedBookDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BorrowForm.resx">
-      <DependentUpon>BorrowForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BuyForm.resx">
       <DependentUpon>BuyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FreeBookDetails.resx">
-      <DependentUpon>FreeBookDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FreeForm.resx">
-      <DependentUpon>FreeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
