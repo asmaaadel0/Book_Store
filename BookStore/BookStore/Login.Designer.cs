@@ -75,6 +75,7 @@ namespace BookStore
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(814, 35);
             this.panel1.TabIndex = 11;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // logo
             // 
@@ -86,6 +87,7 @@ namespace BookStore
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(234, 454);
             this.logo.TabIndex = 12;
+            this.logo.Paint += new System.Windows.Forms.PaintEventHandler(this.logo_Paint);
             // 
             // label6
             // 
@@ -108,6 +110,7 @@ namespace BookStore
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // loginlogo
             // 
@@ -165,6 +168,7 @@ namespace BookStore
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(316, 95);
             this.panel6.TabIndex = 7;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // panel7
             // 
@@ -174,6 +178,7 @@ namespace BookStore
             this.panel7.Size = new System.Drawing.Size(310, 25);
             this.panel7.TabIndex = 4;
             this.panel7.Visible = false;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // label4
             // 
@@ -185,6 +190,7 @@ namespace BookStore
             this.label4.Size = new System.Drawing.Size(175, 17);
             this.label4.TabIndex = 2;
             this.label4.Text = "In valid password try again";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel8
             // 
@@ -195,6 +201,7 @@ namespace BookStore
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(316, 55);
             this.panel8.TabIndex = 3;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // panel9
             // 
@@ -203,6 +210,7 @@ namespace BookStore
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(301, 3);
             this.panel9.TabIndex = 4;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // passwordtextBox
             // 
@@ -227,6 +235,7 @@ namespace BookStore
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label5
             // 
@@ -237,6 +246,7 @@ namespace BookStore
             this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 5;
             this.label5.Text = "Password";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel4
             // 
@@ -246,6 +256,7 @@ namespace BookStore
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(316, 95);
             this.panel4.TabIndex = 4;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel5
             // 
@@ -255,6 +266,7 @@ namespace BookStore
             this.panel5.Size = new System.Drawing.Size(310, 25);
             this.panel5.TabIndex = 4;
             this.panel5.Visible = false;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label3
             // 
@@ -266,6 +278,7 @@ namespace BookStore
             this.label3.Size = new System.Drawing.Size(182, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "In valid user name try again";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel2
             // 
@@ -310,6 +323,7 @@ namespace BookStore
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -320,6 +334,7 @@ namespace BookStore
             this.label1.Size = new System.Drawing.Size(60, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -330,6 +345,7 @@ namespace BookStore
             this.label2.Size = new System.Drawing.Size(79, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "User Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // login
             // 
