@@ -15,10 +15,10 @@ namespace BookStore
         {
             dbMan = new DBManager();
         }
-        public int signupform(string fname, string lname, string username, string password, string email, string state, string city, string district, string street, int housnumber, string postalnum, string countrycode, string phonenumber)
+        public int signupform(string fname, string lname, string username, string password, string email, string state, string city, string district, string street, string housnumber, string postalnum, string countrycode, string phonenumber)
         {
             string query = "insert into Users (Fname,Lname,username,PW,email,stat,city,district,street,HouseNumber,postalNumber,countrycode,PhoneNumber)" +
-                            "values('" + fname + "','" + lname + "','" + username + "','" + password+ "','" + email + "','" + state + "','" + city + "','" + district + "','" + street + "'," + housnumber + ",'" + postalnum + "','" + countrycode +"','"+ phonenumber + "');";
+                            "values('" + fname + "','" + lname + "','" + username + "','" + password+ "','" + email + "','" + state + "','" + city + "','" + district + "','" + street + "','" + housnumber + "','" + postalnum + "','" + countrycode +"','"+ phonenumber + "');";
             return dbMan.ExecuteNonQuery(query);
         }
         public DataTable usernames()

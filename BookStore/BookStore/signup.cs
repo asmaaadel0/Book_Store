@@ -113,7 +113,7 @@ namespace BookStore
                 lastnametextBox.Focus();
                 return;
             }
-            if (isusername(usernametextbox.Text))
+            if (isusername(usernametextbox.Text)||usernametextbox.Text== "Enter User name")
             {
                 panel5.Visible = true;
                 usernametextbox.Focus();
@@ -125,13 +125,36 @@ namespace BookStore
                 emailtextBox.Focus();
                 return;
             }
-            if (passwordtextBox.Text == "Password")
+            if (passwordtextBox.Text == "Password" || passwordtextBox.Text == "") 
             {
                 panel8.Visible = true;
                 passwordtextBox.Focus();
                 return;
             }
-            int result = controllerObj.signupform(firstnametextBox.Text, lastnametextBox.Text, usernametextbox.Text, passwordtextBox.Text, emailtextBox.Text, statetextBox.Text, citytextBox.Text, districttextBox.Text, streettextBox.Text, Int16.Parse(housenumbertextBox.Text), postalnumbertextBox.Text, countrycodetextBox.Text, phonenumbertextBox.Text);
+            if (postalnumbertextBox.Text == "Postal Number")
+            {
+                panel15.Visible = true;
+                postalnumbertextBox.Focus();
+                return;
+            }
+            if (statetextBox.Text == "state" || citytextBox.Text == "City" || districttextBox.Text == "Disrtict" || streettextBox.Text == "Street" || housenumbertextBox.Text == "House Number") 
+            {
+                panel26.Visible = true;
+                statetextBox.Focus();
+                citytextBox.Focus();
+                streettextBox.Focus();
+                districttextBox.Focus();
+                housenumbertextBox.Focus();
+                return;
+            }
+            if (countrycodetextBox.Text == "Country Code" || phonenumbertextBox.Text == "Phone Number")
+            {
+                panel19.Visible = true;
+                countrycodetextBox.Focus();
+                phonenumbertextBox.Focus();
+                return;
+            }
+            int result = controllerObj.signupform(firstnametextBox.Text, lastnametextBox.Text, usernametextbox.Text, passwordtextBox.Text, emailtextBox.Text, statetextBox.Text, citytextBox.Text, districttextBox.Text, streettextBox.Text, housenumbertextBox.Text, postalnumbertextBox.Text, countrycodetextBox.Text, phonenumbertextBox.Text);
             if (result == 0)
             {
                 MessageBox.Show("The sign up failed");
@@ -140,6 +163,8 @@ namespace BookStore
             {
                 MessageBox.Show("you signed up successfully!");
             }
+            Form1 home = new Form1();
+            this.Hide();
         }
         private void emailtextBox_TextChanged(object sender, EventArgs e)
         {
@@ -225,17 +250,50 @@ namespace BookStore
 
         private void phonenumbertextBox_TextChanged(object sender, EventArgs e)
         {
-            phonenumbertextBox.ForeColor = Color.White;
+            try
+            {
+                if (phonenumbertextBox.Text == "")
+                {
+                    phonenumbertextBox.Text = "Phone Number";
+                    phonenumbertextBox.ForeColor = Color.Gray;
+                    return;
+                }
+                panel19.Visible = false;
+                phonenumbertextBox.ForeColor = Color.White;
+            }
+            catch { }
         }
 
         private void statetextBox_TextChanged(object sender, EventArgs e)
         {
-            statetextBox.ForeColor = Color.White;
+            try
+            {
+                if (statetextBox.Text == "")
+                {
+                    statetextBox.Text = "state";
+                    statetextBox.ForeColor = Color.Gray;
+                    return;
+                }
+                panel26.Visible = false;
+                statetextBox.ForeColor = Color.White;
+            }
+            catch { }
         }
 
         private void citytextBox_TextChanged(object sender, EventArgs e)
         {
-            citytextBox.ForeColor = Color.White;
+            try
+            {
+                if (citytextBox.Text == "")
+                {
+                    citytextBox.Text = "City";
+                    citytextBox.ForeColor = Color.Gray;
+                    return;
+                }
+                panel26.Visible = false;
+                citytextBox.ForeColor = Color.White;
+            }
+            catch { }
         }
 
         private void citytextBox_Click(object sender, EventArgs e)
@@ -304,13 +362,8 @@ namespace BookStore
         {
             try
             {
-                if (passwordtextBox.Text == "")
-                {
-                    passwordtextBox.Text = "Password";
-                    passwordtextBox.ForeColor = Color.Gray;
-                    return;
-                }
                 passwordtextBox.ForeColor = Color.White;
+                passwordtextBox.PasswordChar = '*';
                 panel8.Visible = false;
             }
             catch { }
@@ -323,27 +376,82 @@ namespace BookStore
 
         private void postalnumbertextBox_TextChanged(object sender, EventArgs e)
         {
-            postalnumbertextBox.ForeColor = Color.White;
+            try
+            {
+                if (postalnumbertextBox.Text == "")
+                {
+                    postalnumbertextBox.Text = "Postal Number";
+                    postalnumbertextBox.ForeColor = Color.Gray;
+                    return;
+                }
+                panel15.Visible = false;
+                postalnumbertextBox.ForeColor = Color.White;
+            }
+            catch { }
         }
 
         private void countrycodetextBox_TextChanged(object sender, EventArgs e)
         {
-            countrycodetextBox.ForeColor = Color.White;
+            try
+            {
+                if (countrycodetextBox.Text == "")
+                {
+                    countrycodetextBox.Text = "Country Code";
+                    countrycodetextBox.ForeColor = Color.Gray;
+                    return;
+                }
+                panel19.Visible = false;
+                countrycodetextBox.ForeColor = Color.White;
+            }
+            catch { }
         }
 
         private void streettextBox_TextChanged(object sender, EventArgs e)
         {
-            streettextBox.ForeColor = Color.White;
+            try
+            {
+                if (streettextBox.Text == "")
+                {
+                    streettextBox.Text = "Street";
+                    streettextBox.ForeColor = Color.Gray;
+                    return;
+                }
+                panel26.Visible = false;
+                streettextBox.ForeColor = Color.White;
+            }
+            catch { }
         }
 
         private void districttextBox_TextChanged(object sender, EventArgs e)
         {
-            districttextBox.ForeColor = Color.White;
+            try
+            {
+                if (districttextBox.Text == "")
+                {
+                    districttextBox.Text = "Disrtict";
+                    districttextBox.ForeColor = Color.Gray;
+                    return;
+                }
+                panel26.Visible = false;
+                districttextBox.ForeColor = Color.White;
+            }
+            catch { }
         }
 
         private void housenumbertextBox_TextChanged_1(object sender, EventArgs e)
         {
-            housenumbertextBox.ForeColor = Color.White;
+            try
+            {
+                if (housenumbertextBox.Text == "")
+                {
+                    housenumbertextBox.Text = "House Number";
+                    housenumbertextBox.ForeColor = Color.Gray;
+                    return;
+                }
+                panel26.Visible = false;
+                housenumbertextBox.ForeColor = Color.White;
+            }
+            catch { }
         }
 
         private void phonenumbertextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -369,10 +477,64 @@ namespace BookStore
 
         private void postalnumbertextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void countrycodetextBox_Click_1(object sender, EventArgs e)
+        {
+            countrycodetextBox.SelectAll();
+        }
+
+        private void phonenumbertextBox_Click_1(object sender, EventArgs e)
+        {
+            phonenumbertextBox.SelectAll();
+        }
+
+        private void countrycodetextBox_TextChanged_1(object sender, EventArgs e)
+        {
+            try
             {
-                e.Handled = true;
+                if (countrycodetextBox.Text == "")
+                {
+                    countrycodetextBox.Text = "Country Code";
+                    countrycodetextBox.ForeColor = Color.Gray;
+                    return;
+                }
+                countrycodetextBox.ForeColor = Color.White;
+                panel19.Visible = false;
             }
+            catch { }
+        }
+
+        private void phonenumbertextBox_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (phonenumbertextBox.Text == "")
+                {
+                    phonenumbertextBox.Text = "Phone Number";
+                    phonenumbertextBox.ForeColor = Color.Gray;
+                    return;
+                }
+                phonenumbertextBox.ForeColor = Color.White;
+                panel19.Visible = false;
+            }
+            catch { }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

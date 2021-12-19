@@ -31,6 +31,7 @@ namespace BookStore
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(home));
             this.loginlogo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.loginadmin = new System.Windows.Forms.Button();
             this.signupbutton = new System.Windows.Forms.Button();
             this.loginbutton = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@ namespace BookStore
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.loginlogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.logo.SuspendLayout();
@@ -55,6 +55,17 @@ namespace BookStore
             this.loginlogo.Name = "loginlogo";
             this.loginlogo.Size = new System.Drawing.Size(533, 469);
             this.loginlogo.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(349, 31);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Welcome to Our Book Store";
             // 
             // loginadmin
             // 
@@ -144,17 +155,7 @@ namespace BookStore
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(767, 35);
             this.panel1.TabIndex = 14;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(349, 31);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Welcome to Our Book Store";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // home
             // 

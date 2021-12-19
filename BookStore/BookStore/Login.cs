@@ -116,7 +116,7 @@ namespace BookStore
                 usernametextbox.Focus();
                 return;
             }
-            if (passwordtextBox.Text == "Password" || !rightpassword(usernametextbox.Text,passwordtextBox.Text))
+            if (passwordtextBox.Text == "Password" ||passwordtextBox.Text==""|| !rightpassword(usernametextbox.Text,passwordtextBox.Text))
             {
                 panel7.Visible = true;
                 passwordtextBox.Focus();
