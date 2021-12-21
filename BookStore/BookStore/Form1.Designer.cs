@@ -41,6 +41,8 @@
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
+            this.orderedbooksbutton = new System.Windows.Forms.Button();
+            this.mybooksbutton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -192,6 +194,8 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panelTitleBar.Controls.Add(this.orderedbooksbutton);
+            this.panelTitleBar.Controls.Add(this.mybooksbutton);
             this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -234,9 +238,42 @@
             this.panelDesktopPanel.Size = new System.Drawing.Size(681, 371);
             this.panelDesktopPanel.TabIndex = 2;
             // 
+            // orderedbooksbutton
+            // 
+            this.orderedbooksbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.orderedbooksbutton.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
+            this.orderedbooksbutton.FlatAppearance.BorderSize = 2;
+            this.orderedbooksbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.orderedbooksbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orderedbooksbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderedbooksbutton.ForeColor = System.Drawing.Color.Cyan;
+            this.orderedbooksbutton.Location = new System.Drawing.Point(535, 34);
+            this.orderedbooksbutton.Name = "orderedbooksbutton";
+            this.orderedbooksbutton.Size = new System.Drawing.Size(141, 31);
+            this.orderedbooksbutton.TabIndex = 37;
+            this.orderedbooksbutton.Text = "My Ordered Books";
+            this.orderedbooksbutton.UseVisualStyleBackColor = false;
+            this.orderedbooksbutton.Click += new System.EventHandler(this.signupbutton_Click);
+            // 
+            // mybooksbutton
+            // 
+            this.mybooksbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.mybooksbutton.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
+            this.mybooksbutton.FlatAppearance.BorderSize = 2;
+            this.mybooksbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.mybooksbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mybooksbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mybooksbutton.ForeColor = System.Drawing.Color.Cyan;
+            this.mybooksbutton.Location = new System.Drawing.Point(429, 34);
+            this.mybooksbutton.Name = "mybooksbutton";
+            this.mybooksbutton.Size = new System.Drawing.Size(100, 31);
+            this.mybooksbutton.TabIndex = 36;
+            this.mybooksbutton.Text = "My Books";
+            this.mybooksbutton.UseVisualStyleBackColor = false;
+            this.mybooksbutton.Click += new System.EventHandler(this.loginbutton_Click);
+            // 
             // pictureBox1
             // 
-            //this.pictureBox1.Image = global::BookStore.Properties.Resources.Here_is_a_theater_to_unfold_an_outstanding_drama__and_the_characters_are_book_lovers_sitting_on_the_soft_couch_or_standing_beside_the_bookshelves__0004;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(2000, 1334);
@@ -281,6 +318,8 @@
         private System.Windows.Forms.Panel panelDesktopPanel;
         private System.Windows.Forms.Button btnCloseChildForm;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button orderedbooksbutton;
+        private System.Windows.Forms.Button mybooksbutton;
     }
 }
 

@@ -114,24 +114,29 @@ namespace BookStore
         private void SellBtn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new BuyForm(), sender);
+            mybooksbutton.Hide();
+            orderedbooksbutton.Hide();
         }
 
         private void LendBtn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new BuyForm(), sender);
-
+            mybooksbutton.Hide();
+            orderedbooksbutton.Hide();
         }
 
         private void DonateBtn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new BuyForm(), sender);
-
+            mybooksbutton.Hide();
+            orderedbooksbutton.Hide();
         }
 
         private void OrderBtn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new BuyForm(), sender);
-
+            mybooksbutton.Hide();
+            orderedbooksbutton.Hide();
         }
 
         private void BuyBtn_Click(object sender, EventArgs e)
@@ -143,13 +148,15 @@ namespace BookStore
         private void BorrowBtn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new BorrowForm(), sender);
-
+            mybooksbutton.Hide();
+            orderedbooksbutton.Hide();
         }
 
         private void TakeBtn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FreeForm(), sender);
-
+            mybooksbutton.Hide();
+            orderedbooksbutton.Hide();
         }
 
 
@@ -167,6 +174,18 @@ namespace BookStore
             panelLogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
             btnCloseChildForm.Visible = false;
+        }
+
+        private void loginbutton_Click(object sender, EventArgs e)
+        {
+            BooksOfUser form = new BooksOfUser();
+            form.Show();
+        }
+
+        private void signupbutton_Click(object sender, EventArgs e)
+        {
+            orderedbooksofuser form = new orderedbooksofuser();
+            form.Show();
         }
     }
 }

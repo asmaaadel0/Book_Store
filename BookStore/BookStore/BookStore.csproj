@@ -70,6 +70,12 @@
     <Compile Include="BookDetails.Designer.cs">
       <DependentUpon>BookDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="BooksOfUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BooksOfUser.Designer.cs">
+      <DependentUpon>BooksOfUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="BorrowedBookDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,12 @@
     <Compile Include="open.Designer.cs">
       <DependentUpon>open.cs</DependentUpon>
     </Compile>
+    <Compile Include="orderedbooksofuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderedbooksofuser.Designer.cs">
+      <DependentUpon>orderedbooksofuser.cs</DependentUpon>
+    </Compile>
     <Compile Include="signup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookDetails.resx">
       <DependentUpon>BookDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BooksOfUser.resx">
+      <DependentUpon>BooksOfUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowedBookDetails.resx">
       <DependentUpon>BorrowedBookDetails.cs</DependentUpon>
@@ -175,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="open.resx">
       <DependentUpon>open.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderedbooksofuser.resx">
+      <DependentUpon>orderedbooksofuser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
