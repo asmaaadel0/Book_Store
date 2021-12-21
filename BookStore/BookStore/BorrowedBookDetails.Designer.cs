@@ -54,10 +54,10 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+           /* this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();*/
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +90,7 @@
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.shapeContainer1);
+           // this.panel1.Controls.Add(this.shapeContainer1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.Black;
@@ -391,7 +391,7 @@
             // 
             // shapeContainer1
             // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+          /*  this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
@@ -408,11 +408,11 @@
             this.lineShape3.X1 = 13;
             this.lineShape3.X2 = 738;
             this.lineShape3.Y1 = 315;
-            this.lineShape3.Y2 = 315;
+            this.lineShape3.Y2 = 315;*/
             // 
             // lineShape2
             // 
-            this.lineShape2.Name = "lineShape2";
+          /*  this.lineShape2.Name = "lineShape2";
             this.lineShape2.X1 = 606;
             this.lineShape2.X2 = 606;
             this.lineShape2.Y1 = -2;
@@ -424,7 +424,7 @@
             this.lineShape1.X1 = 1;
             this.lineShape1.X2 = 300;
             this.lineShape1.Y1 = 175;
-            this.lineShape1.Y2 = 175;
+            this.lineShape1.Y2 = 175;*/
             // 
             // BorrowedBookDetails
             // 
@@ -470,10 +470,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+       /* private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;*/
 
 
     }
