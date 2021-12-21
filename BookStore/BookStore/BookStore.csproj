@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminForms\AddSeminars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\AddSeminars.Designer.cs">
+      <DependentUpon>AddSeminars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\AddShippingCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\AddShippingCompany.Designer.cs">
+      <DependentUpon>AddShippingCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMINS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMINS.Designer.cs">
+      <DependentUpon>ADMINS.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +137,15 @@
     <Compile Include="StoredProcedures.cs" />
     <Compile Include="ThemeColor.cs" />
     <Compile Include="ValidationClass.cs" />
+    <EmbeddedResource Include="AdminForms\AddSeminars.resx">
+      <DependentUpon>AddSeminars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\AddShippingCompany.resx">
+      <DependentUpon>AddShippingCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMINS.resx">
+      <DependentUpon>ADMINS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookDetails.resx">
       <DependentUpon>BookDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,5 +211,6 @@
   <ItemGroup>
     <None Include="Resources\book2.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
