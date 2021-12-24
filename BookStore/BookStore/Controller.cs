@@ -103,5 +103,48 @@ namespace BookStore
             Parameters.Add("@PhoneNumber", phonenumber);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        public DataTable takenbooksforspecificuser(string username)
+        {
+            string StoredProcedureName = StoredProcedures.takenbooksforspecificuser;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public DataTable buyingbooksforspecificuser(string username)
+        {
+            string StoredProcedureName = StoredProcedures.buyingbooksforspecificuser;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public DataTable borrowingbooksforspecificuser(string username)
+        {
+            string StoredProcedureName = StoredProcedures.borrowingbooksforspecificuser;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public int selectcountofbuyingbooks(string username)
+        {
+            string StoredProcedureName = StoredProcedures.selectcountofbuyingbooks;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+        }
+        public int deletebook(string username)
+        {
+            string StoredProcedureName = StoredProcedures.deletebook;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public int updatecountofbooks(string username,int count)
+        {
+            string StoredProcedureName = StoredProcedures.updatecountofbooks;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@newcount", count);
+            Parameters.Add("@username", username);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
     }
 }

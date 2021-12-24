@@ -18,5 +18,11 @@ namespace BookStore
         public static string passwordofusername = "passwordofusername";
         public static string passwordofusernameadmin = "passwordofusernameadmin";
         public static string signupform = "signupform";
+        public static string takenbooksforspecificuser = "takenbooksforspecificuser";
+        public static string buyingbooksforspecificuser = "buyingbooksforspecificuser";
+        public static string borrowingbooksforspecificuser = "borrowingbooksforspecificuser";
+        public static string selectcountofbuyingbooks = "selectcountofbuyingbooks";
+        public static string deletebook = "deletebook";
+        public static string updatecountofbooks = "updatecountofbooks";
     }
 }

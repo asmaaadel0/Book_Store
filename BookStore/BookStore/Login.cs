@@ -126,7 +126,10 @@ namespace BookStore
             home.Show();
             this.Hide();
         }
-
+        public string username()
+        {
+            return usernametextbox.Text;
+        }
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             signup sign = new signup();
