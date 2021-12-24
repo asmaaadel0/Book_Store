@@ -32,15 +32,54 @@ namespace BookStore
         private void orderedbooksofuser_Load(object sender, EventArgs e)
         {
             controllerObj = new Controller();
+            dataGridView4.ColumnCount = 3;
+            dataGridView4.Columns[0].Name = "Books to buy";
+            dataGridView4.Columns[1].Name = "cancel";
+            dataGridView4.Columns[2].Name = "Approve";
+            for (int i = 1; i <= controllerObj.numofrowsofbuybooks(); i++)
+            {
+                string[] row = new string[] { i.ToString() };
+                dataGridView4.Rows.Add(row);
+            }
+            int j = 0;
             DataTable dt = controllerObj.takenbooksforspecificuser(log.username());
             foreach (DataRow dr in dt.Rows)
-                dataGridView1.Rows.Add(dr["title"].ToString());
-            dt = controllerObj.buyingbooksforspecificuser(log.username());
+            {
+                dataGridView4.Rows[j].Cells["Books to buy"].Value = dr[0].ToString();
+                j++;
+            }
+            dataGridView3.ColumnCount = 3;
+            dataGridView3.Columns[0].Name = "Books to borrow";
+            dataGridView3.Columns[1].Name = "cancel";
+            dataGridView3.Columns[2].Name = "Approve";
+            for (int i = 1; i <= controllerObj.numofrowsofbuybooks(); i++)
+            {
+                string[] row = new string[] { i.ToString() };
+                dataGridView3.Rows.Add(row);
+            }
+            j = 0;
+            dt = controllerObj.takenbooksforspecificuser(log.username());
             foreach (DataRow dr in dt.Rows)
-                dataGridView3.Rows.Add(dr["title"].ToString());
-            dt = controllerObj.borrowingbooksforspecificuser(log.username());
+            {
+                dataGridView1.Rows[j].Cells["Books to borrow"].Value = dr[0].ToString();
+                j++;
+            }
+            dataGridView2.ColumnCount = 3;
+            dataGridView2.Columns[0].Name = "Books to Donate";
+            dataGridView2.Columns[1].Name = "cancel";
+            dataGridView2.Columns[2].Name = "Approve";
+            for (int i = 1; i <= controllerObj.numofrowsofbuybooks(); i++)
+            {
+                string[] row = new string[] { i.ToString() };
+                dataGridView2.Rows.Add(row);
+            }
+            j = 0;
+            dt = controllerObj.takenbooksforspecificuser(log.username());
             foreach (DataRow dr in dt.Rows)
-                dataGridView3.Rows.Add(dr["title"].ToString());
+            {
+                dataGridView2.Rows[j].Cells["Books to Donate"].Value = dr[0].ToString();
+                j++;
+            }
         }
 
         private void showbookstosell_Click(object sender, EventArgs e)
@@ -116,6 +155,11 @@ namespace BookStore
                     dataGridView2.Rows.Remove(row);
                 }
             }
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

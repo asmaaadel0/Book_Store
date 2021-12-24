@@ -30,5 +30,17 @@ namespace BookStore
         public static string selectcountoftakebooks = "selectcountoftakebooks";
         public static string updatecountoftakebooks = "updatecountoftakebooks";
         public static string deletetakebook = "deletetakebook";
+        public static string sellbooksofuser = "sellbooksofuser";
+        public static string lendbooksofuser = "lendbooksofuser";
+        public static string donatebooksofuser = "donatebooksofuser";
+        public static string buyerbookformuser = "buyerbookformuser";
+        public static string borrowbookformuser = "borrowbookformuser";
+        public static string takerbookformuser = "takerbookformuser";
+        public static string ISBNdonatebooksofuser = "ISBNdonatebooksofuser";
+        public static string ISBNlendbooksofuser = "ISBNlendbooksofuser";
+        public static string ISBNsellbooksofuser = "ISBNsellbooksofuser";
+        public static string numofrowsofbuybooks = "numofrowsofbuybooks";
+        public static string numofrowsofborrowbooks = "numofrowsofborrowbooks";
+        public static string numofrowsoftakebooks = "numofrowsoftakebooks";
     }
 }
