@@ -130,7 +130,7 @@ namespace BookStore
             this.showbookstolend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showbookstolend.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showbookstolend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.showbookstolend.Location = new System.Drawing.Point(175, 3);
+            this.showbookstolend.Location = new System.Drawing.Point(175, 6);
             this.showbookstolend.Name = "showbookstolend";
             this.showbookstolend.Size = new System.Drawing.Size(85, 31);
             this.showbookstolend.TabIndex = 35;
