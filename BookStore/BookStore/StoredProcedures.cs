@@ -24,5 +24,11 @@ namespace BookStore
         public static string selectcountofbuyingbooks = "selectcountofbuyingbooks";
         public static string deletebook = "deletebook";
         public static string updatecountofbooks = "updatecountofbooks";
+        public static string selectcountofborrowbooks = "selectcountofborrowbooks";
+        public static string updatecountofborrowbooks = "updatecountofborrowbooks";
+        public static string deleteborrowbook = "deleteborrowbook";
+        public static string selectcountoftakebooks = "selectcountoftakebooks";
+        public static string updatecountoftakebooks = "updatecountoftakebooks";
+        public static string deletetakebook = "deletetakebook";
     }
 }

@@ -45,7 +45,7 @@ namespace BookStore
 
         private void showbookstosell_Click(object sender, EventArgs e)
         {
-            foreach(DataGridViewRow row in dataGridView3.Rows)
+            foreach (DataGridViewRow row in dataGridView4.Rows)
             {
                 bool isSelected = Convert.ToBoolean(row.Cells["approvecolumn"].Value);
                 if (isSelected)
@@ -61,10 +61,61 @@ namespace BookStore
                 isSelected = Convert.ToBoolean(row.Cells["cancelcolumn"].Value);
                 if (isSelected)
                 {
+                    dataGridView4.Rows.Remove(row);
+                }
+            }
+
+        }
+
+        private void borrow_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView3.Rows)
+            {
+                bool isSelected = Convert.ToBoolean(row.Cells["approvecolumn2"].Value);
+                if (isSelected)
+                {
+                    if (controllerObj.selectcountofborrowbooks(log.username()) == 1)
+                        controllerObj.deleteborrowbook(log.username());
+                    else
+                    {
+                        int newcount = controllerObj.selectcountofborrowbooks(log.username()) - 1;
+                        controllerObj.updatecountofborrowbooks(log.username(), newcount);
+                    }
+                }
+                isSelected = Convert.ToBoolean(row.Cells["cancelcolumn2"].Value);
+                if (isSelected)
+                {
                     dataGridView3.Rows.Remove(row);
                 }
             }
-              
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void donate_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                bool isSelected = Convert.ToBoolean(row.Cells["approvecolumn3"].Value);
+                if (isSelected)
+                {
+                    if (controllerObj.selectcountoftakebooks(log.username()) == 1)
+                        controllerObj.deletetakebook(log.username());
+                    else
+                    {
+                        int newcount = controllerObj.selectcountoftakebooks(log.username()) - 1;
+                        controllerObj.updatecountoftakebooks(log.username(), newcount);
+                    }
+                }
+                isSelected = Convert.ToBoolean(row.Cells["cancelcolumn3"].Value);
+                if (isSelected)
+                {
+                    dataGridView2.Rows.Remove(row);
+                }
+            }
         }
     }
 }
