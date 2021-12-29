@@ -113,21 +113,21 @@ namespace BookStore
 
         private void SellBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new BuyForm(), sender);
+            OpenChildForm(new sell(), sender);
             mybooksbutton.Hide();
             orderedbooksbutton.Hide();
         }
 
         private void LendBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new BuyForm(), sender);
+            OpenChildForm(new Lend(), sender);
             mybooksbutton.Hide();
             orderedbooksbutton.Hide();
         }
 
         private void DonateBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new BuyForm(), sender);
+            OpenChildForm(new Donate(), sender);
             mybooksbutton.Hide();
             orderedbooksbutton.Hide();
         }

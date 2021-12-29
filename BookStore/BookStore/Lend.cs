@@ -32,5 +32,10 @@ namespace BookStore
                 a.Focus();
             }
         }
+
+        private void UploadBookCover_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

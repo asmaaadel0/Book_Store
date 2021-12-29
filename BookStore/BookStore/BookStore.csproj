@@ -64,6 +64,12 @@
     <Compile Include="ADMINS.Designer.cs">
       <DependentUpon>ADMINS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Author.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Author.Designer.cs">
+      <DependentUpon>Author.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,12 @@
     </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
+    <Compile Include="Donate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donate.Designer.cs">
+      <DependentUpon>Donate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,12 @@
     </Compile>
     <Compile Include="FreeForm.Designer.cs">
       <DependentUpon>FreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lend.Designer.cs">
+      <DependentUpon>Lend.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginAdmin.cs">
       <SubType>Form</SubType>
@@ -138,6 +156,18 @@
     <Compile Include="orderedbooksofuser.Designer.cs">
       <DependentUpon>orderedbooksofuser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Publisher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Publisher.Designer.cs">
+      <DependentUpon>Publisher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sell.Designer.cs">
+      <DependentUpon>sell.cs</DependentUpon>
+    </Compile>
     <Compile Include="signup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +188,9 @@
     <EmbeddedResource Include="ADMINS.resx">
       <DependentUpon>ADMINS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Author.resx">
+      <DependentUpon>Author.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookDetails.resx">
       <DependentUpon>BookDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +206,9 @@
     <EmbeddedResource Include="BuyForm.resx">
       <DependentUpon>BuyForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Donate.resx">
+      <DependentUpon>Donate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FreeForm.resx">
       <DependentUpon>FreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lend.resx">
+      <DependentUpon>Lend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -193,6 +232,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="orderedbooksofuser.resx">
       <DependentUpon>orderedbooksofuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Publisher.resx">
+      <DependentUpon>Publisher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sell.resx">
+      <DependentUpon>sell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>

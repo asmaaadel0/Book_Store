@@ -269,6 +269,7 @@
             this.UploadBookCover.TabIndex = 25;
             this.UploadBookCover.Text = "Upload Book Cover";
             this.UploadBookCover.UseVisualStyleBackColor = true;
+            this.UploadBookCover.Click += new System.EventHandler(this.UploadBookCover_Click);
             // 
             // LInsertAuthorInformation
             // 

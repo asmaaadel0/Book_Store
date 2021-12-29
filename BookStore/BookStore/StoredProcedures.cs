@@ -42,5 +42,10 @@ namespace BookStore
         public static string numofrowsofbuybooks = "numofrowsofbuybooks";
         public static string numofrowsofborrowbooks = "numofrowsofborrowbooks";
         public static string numofrowsoftakebooks = "numofrowsoftakebooks";
+        public static string InsertBookToSell = "InsertBooksToSell";
+        public static string InsertBookToLend = "InsertBooksToLend";
+        public static string InsertBookToDonate = "InsertBooksToDonate";
+        public static string InsertAuthor = "InsertAuthor";
+        public static string InsertPublisher = "InsertPublicher";
     }
 }
