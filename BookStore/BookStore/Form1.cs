@@ -182,7 +182,7 @@ namespace BookStore
 
         private void loginbutton_Click(object sender, EventArgs e)
         {
-            BooksOfUser form = new BooksOfUser();
+            BooksOfUser form = new BooksOfUser(username);
             form.Show();
         }
 

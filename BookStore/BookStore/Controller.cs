@@ -48,7 +48,7 @@ namespace BookStore
         }
         public int signupform(string fname, string lname, string username, string password, string email, string state, string city, string district, string street, string housnumber, string postalnum, string countrycode, string phonenumber)
         {
-            string StoredProcedureName = StoredProcedures.InsertProject;
+            string StoredProcedureName = StoredProcedures.signupform;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@Fname", fname);
             Parameters.Add("@Lname", lname);
@@ -91,21 +91,21 @@ namespace BookStore
             string StoredProcedureName = StoredProcedures.selectcountofbuyingbooks;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@username", username);
-            return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         public int selectcountofborrowbooks(string username)
         {
             string StoredProcedureName = StoredProcedures.selectcountofborrowbooks;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@username", username);
-            return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         public int selectcountoftakebooks(string username)
         {
             string StoredProcedureName = StoredProcedures.selectcountoftakebooks;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@username", username);
-            return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
         public int deletebook(string username)
@@ -265,13 +265,13 @@ namespace BookStore
             Parameters.Add("@username", username);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
-        public DataTable buyerbookformuser(string username,string ISBN)
+        public string buyerbookformuser(string username,string ISBN)
         {
             string StoredProcedureName = StoredProcedures.buyerbookformuser;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@username", username);
             Parameters.Add("@ISBN", ISBN);
-            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+            return (string)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
         public DataTable borrowbookformuser(string username,string ISBN)
         {

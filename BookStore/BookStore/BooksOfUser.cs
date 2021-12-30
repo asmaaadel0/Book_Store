@@ -14,8 +14,10 @@ namespace BookStore
     {
         Controller controllerObj;
         login log = new login();
-        public BooksOfUser()
+        string username;
+        public BooksOfUser(string name)
         {
+            username = name;
             InitializeComponent();
         }
 
@@ -39,11 +41,14 @@ namespace BookStore
             int j = 0;
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                dataGridView1.Rows[j].Cells["buyer"].Value = controllerObj.buyerbookformuser(log.username(), controllerObj.ISBNsellbooksofuser(log.username(), row.Cells[0].Value.ToString()));
-                if (dataGridView1.Rows[j].Cells["buyer"].Value == null)
-                    dataGridView1.Rows[j].Cells["ordered"].Value =true;
+                if (row.Cells[0].Value==null)
+                    return;
+                dataGridView1.Rows[j].Cells[1].Value = controllerObj.buyerbookformuser(username, controllerObj.ISBNsellbooksofuser(username, row.Cells[0].Value.ToString()));
+                if (dataGridView1.Rows[j].Cells[1].Value != null)
+                    dataGridView1.Rows[j].Cells["ordered"].Value = true;
+                j++;
             }
-               
+
 
         }
 
@@ -61,18 +66,29 @@ namespace BookStore
         {
             int j = 0;
             foreach (DataGridViewRow row in dataGridView3.Rows)
-                dataGridView3.Rows[j].Cells["taker"].Value = controllerObj.buyerbookformuser(log.username(), controllerObj.ISBNsellbooksofuser(log.username(), row.Cells[0].Value.ToString()));
-            if (dataGridView3.Rows[j].Cells["taker"].Value == null)
-                dataGridView3.Rows[j].Cells["ordered"].Value = true;
+            {
+                if (row.Cells[0].Value == null)
+                    return;
+                dataGridView3.Rows[j].Cells["taker"].Value = controllerObj.buyerbookformuser(username, controllerObj.ISBNsellbooksofuser(username, row.Cells[0].Value.ToString()));
+                if (dataGridView3.Rows[j].Cells["taker"].Value != null)
+                    dataGridView3.Rows[j].Cells["ordered"].Value = true;
+                j++;
+            }
+
         }
 
         private void showbookstolend_Click(object sender, EventArgs e)
         {
             int j = 0;
             foreach (DataGridViewRow row in dataGridView2.Rows)
-                dataGridView2.Rows[j].Cells["borrower"].Value = controllerObj.buyerbookformuser(log.username(), controllerObj.ISBNsellbooksofuser(log.username(), row.Cells[0].Value.ToString()));
-            if (dataGridView1.Rows[j].Cells["borrower"].Value == null)
-                dataGridView1.Rows[j].Cells["ordered"].Value = true;
+            {
+                if (row.Cells[0].Value == null)
+                    return;
+                dataGridView2.Rows[j].Cells["borrower"].Value = controllerObj.buyerbookformuser(username, controllerObj.ISBNsellbooksofuser(username, row.Cells[0].Value.ToString()));
+                if (dataGridView2.Rows[j].Cells["borrower"].Value != null)
+                    dataGridView2.Rows[j].Cells["ordered"].Value = true;
+                j++;
+            }
         }
 
         private void BooksOfUser_Load(object sender, EventArgs e)
@@ -88,7 +104,7 @@ namespace BookStore
                 dataGridView1.Rows.Add(row);
             }
             int j = 0;
-            DataTable dt = controllerObj.sellbooksofuser(log.username());
+            DataTable dt = controllerObj.sellbooksofuser(username);
             foreach (DataRow dr in dt.Rows)
             {
                 dataGridView1.Rows[j].Cells["Books to sell"].Value = dr[0].ToString();
@@ -104,10 +120,10 @@ namespace BookStore
                 dataGridView3.Rows.Add(row);
             }
             j = 0;
-            dt = controllerObj.donatebooksofuser(log.username());
+            dt = controllerObj.donatebooksofuser(username);
             foreach (DataRow dr in dt.Rows)
             {
-                dataGridView1.Rows[j].Cells["Books to Donate"].Value = dr[0].ToString();
+                dataGridView3.Rows[j].Cells["Books to Donate"].Value = dr[0].ToString();
                 j++;
             }
             dataGridView2.ColumnCount = 3;
@@ -120,7 +136,7 @@ namespace BookStore
                 dataGridView2.Rows.Add(row);
             }
             j = 0;
-            dt = controllerObj.lendbooksofuser(log.username());
+            dt = controllerObj.lendbooksofuser(username);
             foreach (DataRow dr in dt.Rows)
             {
                 dataGridView2.Rows[j].Cells["Books to lend"].Value = dr[0].ToString();

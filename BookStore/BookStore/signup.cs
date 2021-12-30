@@ -162,9 +162,10 @@ namespace BookStore
             else
             {
                 MessageBox.Show("you signed up successfully!");
+                Form1 home = new Form1(usernametextbox.Text);
+                home.Show();
+                this.Hide();
             }
-            Form1 home = new Form1(usernametextbox.Text);
-            this.Hide();
         }
         private void emailtextBox_TextChanged(object sender, EventArgs e)
         {

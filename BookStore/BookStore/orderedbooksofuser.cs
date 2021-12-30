@@ -97,7 +97,7 @@ namespace BookStore
                     else
                     {
                         int newcount = controllerObj.selectcountofbuyingbooks(username3) - 1;
-                        controllerObj.updatecountofbooks(log.username(), newcount);
+                        controllerObj.updatecountofbooks(username3, newcount);
                     }
                 }
                 isSelected = Convert.ToBoolean(row.Cells["cancel"].Value);

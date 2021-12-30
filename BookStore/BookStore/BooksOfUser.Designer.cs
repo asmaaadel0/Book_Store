@@ -32,18 +32,18 @@ namespace BookStore
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.showbookstodonate = new System.Windows.Forms.Button();
@@ -52,17 +52,17 @@ namespace BookStore
             this.panel2 = new System.Windows.Forms.Panel();
             this.showbookstosell = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.BooktoDonate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TakerUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderetake = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.BooktoLend = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BorrowerUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderlend = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BooktoSell = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Buyerusername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderbuy = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.BooktoDonate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TakerUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderetake = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.BooktoLend = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BorrowerUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderlend = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,7 +84,7 @@ namespace BookStore
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1288, 307);
+            this.panel1.Size = new System.Drawing.Size(1288, 460);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -209,34 +209,9 @@ namespace BookStore
             this.dataGridView3.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView3.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
             this.dataGridView3.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dataGridView3.Size = new System.Drawing.Size(461, 203);
+            this.dataGridView3.Size = new System.Drawing.Size(461, 356);
             this.dataGridView3.TabIndex = 3;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // BooktoDonate
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateGray;
-            this.BooktoDonate.DefaultCellStyle = dataGridViewCellStyle2;
-            this.BooktoDonate.HeaderText = "Books to Donate";
-            this.BooktoDonate.Name = "BooktoDonate";
-            this.BooktoDonate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // TakerUsername
-            // 
-            this.TakerUsername.HeaderText = "Taker";
-            this.TakerUsername.Name = "TakerUsername";
-            // 
-            // orderetake
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle3.NullValue = false;
-            this.orderetake.DefaultCellStyle = dataGridViewCellStyle3;
-            this.orderetake.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.orderetake.HeaderText = "Ordered";
-            this.orderetake.Name = "orderetake";
-            this.orderetake.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.orderetake.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dataGridView2
             // 
@@ -283,34 +258,9 @@ namespace BookStore
             this.dataGridView2.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView2.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
             this.dataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dataGridView2.Size = new System.Drawing.Size(406, 203);
+            this.dataGridView2.Size = new System.Drawing.Size(406, 356);
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // BooktoLend
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.SlateGray;
-            this.BooktoLend.DefaultCellStyle = dataGridViewCellStyle7;
-            this.BooktoLend.HeaderText = "Books to Lend";
-            this.BooktoLend.Name = "BooktoLend";
-            this.BooktoLend.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // BorrowerUsername
-            // 
-            this.BorrowerUsername.HeaderText = "Borrower";
-            this.BorrowerUsername.Name = "BorrowerUsername";
-            // 
-            // orderlend
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle8.NullValue = false;
-            this.orderlend.DefaultCellStyle = dataGridViewCellStyle8;
-            this.orderlend.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.orderlend.HeaderText = "Ordered";
-            this.orderlend.Name = "orderlend";
-            this.orderlend.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.orderlend.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dataGridView1
             // 
@@ -357,7 +307,7 @@ namespace BookStore
             this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
             this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dataGridView1.Size = new System.Drawing.Size(382, 203);
+            this.dataGridView1.Size = new System.Drawing.Size(382, 356);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -371,7 +321,7 @@ namespace BookStore
             // 
             // Buyerusername
             // 
-            this.Buyerusername.HeaderText = "Buyer";
+            this.Buyerusername.HeaderText = "buyer";
             this.Buyerusername.Name = "Buyerusername";
             // 
             // orderbuy
@@ -381,16 +331,66 @@ namespace BookStore
             dataGridViewCellStyle13.NullValue = false;
             this.orderbuy.DefaultCellStyle = dataGridViewCellStyle13;
             this.orderbuy.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.orderbuy.HeaderText = "Ordered";
+            this.orderbuy.HeaderText = "ordered";
             this.orderbuy.Name = "orderbuy";
             this.orderbuy.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.orderbuy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // BooktoDonate
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateGray;
+            this.BooktoDonate.DefaultCellStyle = dataGridViewCellStyle2;
+            this.BooktoDonate.HeaderText = "Books to Donate";
+            this.BooktoDonate.Name = "BooktoDonate";
+            this.BooktoDonate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // TakerUsername
+            // 
+            this.TakerUsername.HeaderText = "taker";
+            this.TakerUsername.Name = "TakerUsername";
+            // 
+            // orderetake
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle3.NullValue = false;
+            this.orderetake.DefaultCellStyle = dataGridViewCellStyle3;
+            this.orderetake.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.orderetake.HeaderText = "ordered";
+            this.orderetake.Name = "orderetake";
+            this.orderetake.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.orderetake.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // BooktoLend
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.SlateGray;
+            this.BooktoLend.DefaultCellStyle = dataGridViewCellStyle7;
+            this.BooktoLend.HeaderText = "Books to Lend";
+            this.BooktoLend.Name = "BooktoLend";
+            this.BooktoLend.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // BorrowerUsername
+            // 
+            this.BorrowerUsername.HeaderText = "borrower";
+            this.BorrowerUsername.Name = "BorrowerUsername";
+            // 
+            // orderlend
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle8.NullValue = false;
+            this.orderlend.DefaultCellStyle = dataGridViewCellStyle8;
+            this.orderlend.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.orderlend.HeaderText = "ordered";
+            this.orderlend.Name = "orderlend";
+            this.orderlend.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.orderlend.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // BooksOfUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1288, 307);
+            this.ClientSize = new System.Drawing.Size(1288, 460);
             this.Controls.Add(this.panel1);
             this.Name = "BooksOfUser";
             this.Text = "BooksOfUser";
@@ -410,22 +410,22 @@ namespace BookStore
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BooktoDonate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TakerUsername;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn orderetake;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BooktoLend;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BorrowerUsername;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn orderlend;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BooktoSell;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Buyerusername;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn orderbuy;
         private System.Windows.Forms.Button showbookstosell;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button showbookstodonate;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button showbookstolend;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BooktoDonate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TakerUsername;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn orderetake;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BooktoLend;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BorrowerUsername;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn orderlend;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BooktoSell;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Buyerusername;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn orderbuy;
     }
 }
