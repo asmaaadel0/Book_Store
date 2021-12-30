@@ -122,7 +122,8 @@ namespace BookStore
                 passwordtextBox.Focus();
                 return;
             }
-            Form1 home = new Form1();
+            orderedbooksofuser form = new orderedbooksofuser(usernametextbox.Text);
+            Form1 home = new Form1(usernametextbox.Text);
             home.Show();
             this.Hide();
         }

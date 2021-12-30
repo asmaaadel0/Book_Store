@@ -163,7 +163,7 @@ namespace BookStore
             {
                 MessageBox.Show("you signed up successfully!");
             }
-            Form1 home = new Form1();
+            Form1 home = new Form1(usernametextbox.Text);
             this.Hide();
         }
         private void emailtextBox_TextChanged(object sender, EventArgs e)

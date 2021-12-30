@@ -315,19 +315,19 @@ namespace BookStore
         }
         public int numofrowsofbuybooks()
         {
-            string StoredProcedureName = StoredProcedures.ISBNlendbooksofuser;
+            string StoredProcedureName = StoredProcedures.numofrowsofbuybooks;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
         public int numofrowsofborrowbooks()
         {
-            string StoredProcedureName = StoredProcedures.ISBNlendbooksofuser;
+            string StoredProcedureName = StoredProcedures.numofrowsofborrowbooks;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
         public int numofrowsoftakebooks()
         {
-            string StoredProcedureName = StoredProcedures.ISBNlendbooksofuser;
+            string StoredProcedureName = StoredProcedures.numofrowsoftakebooks;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
 

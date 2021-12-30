@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace BookStore
 {
+
     public partial class orderedbooksofuser : Form
     {
         Controller controllerObj;
-        login log = new login();
-        public orderedbooksofuser()
+        public login log;
+        public string username3;
+        public orderedbooksofuser(string name)
         {
             InitializeComponent();
+            username3 = name;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -42,7 +45,7 @@ namespace BookStore
                 dataGridView4.Rows.Add(row);
             }
             int j = 0;
-            DataTable dt = controllerObj.takenbooksforspecificuser(log.username());
+            DataTable dt = controllerObj.takenbooksforspecificuser(username3);
             foreach (DataRow dr in dt.Rows)
             {
                 dataGridView4.Rows[j].Cells["Books to buy"].Value = dr[0].ToString();
@@ -58,10 +61,10 @@ namespace BookStore
                 dataGridView3.Rows.Add(row);
             }
             j = 0;
-            dt = controllerObj.takenbooksforspecificuser(log.username());
+            dt = controllerObj.takenbooksforspecificuser(username3);
             foreach (DataRow dr in dt.Rows)
             {
-                dataGridView1.Rows[j].Cells["Books to borrow"].Value = dr[0].ToString();
+                dataGridView3.Rows[j].Cells["Books to borrow"].Value = dr[0].ToString();
                 j++;
             }
             dataGridView2.ColumnCount = 3;
@@ -74,7 +77,7 @@ namespace BookStore
                 dataGridView2.Rows.Add(row);
             }
             j = 0;
-            dt = controllerObj.takenbooksforspecificuser(log.username());
+            dt = controllerObj.takenbooksforspecificuser(username3);
             foreach (DataRow dr in dt.Rows)
             {
                 dataGridView2.Rows[j].Cells["Books to Donate"].Value = dr[0].ToString();
@@ -86,18 +89,18 @@ namespace BookStore
         {
             foreach (DataGridViewRow row in dataGridView4.Rows)
             {
-                bool isSelected = Convert.ToBoolean(row.Cells["approvecolumn"].Value);
+                bool isSelected = Convert.ToBoolean(row.Cells["Approve"].Value);
                 if (isSelected)
                 {
-                    if (controllerObj.selectcountofbuyingbooks(log.username()) == 1)
-                        controllerObj.deletebook(log.username());
+                    if (controllerObj.selectcountofbuyingbooks(username3) == 1)
+                        controllerObj.deletebook(username3);
                     else
                     {
-                        int newcount = controllerObj.selectcountofbuyingbooks(log.username()) - 1;
+                        int newcount = controllerObj.selectcountofbuyingbooks(username3) - 1;
                         controllerObj.updatecountofbooks(log.username(), newcount);
                     }
                 }
-                isSelected = Convert.ToBoolean(row.Cells["cancelcolumn"].Value);
+                isSelected = Convert.ToBoolean(row.Cells["cancel"].Value);
                 if (isSelected)
                 {
                     dataGridView4.Rows.Remove(row);
@@ -110,18 +113,18 @@ namespace BookStore
         {
             foreach (DataGridViewRow row in dataGridView3.Rows)
             {
-                bool isSelected = Convert.ToBoolean(row.Cells["approvecolumn2"].Value);
+                bool isSelected = Convert.ToBoolean(row.Cells["Approve"].Value);
                 if (isSelected)
                 {
-                    if (controllerObj.selectcountofborrowbooks(log.username()) == 1)
-                        controllerObj.deleteborrowbook(log.username());
+                    if (controllerObj.selectcountofborrowbooks(username3) == 1)
+                        controllerObj.deleteborrowbook(username3);
                     else
                     {
-                        int newcount = controllerObj.selectcountofborrowbooks(log.username()) - 1;
-                        controllerObj.updatecountofborrowbooks(log.username(), newcount);
+                        int newcount = controllerObj.selectcountofborrowbooks(username3) - 1;
+                        controllerObj.updatecountofborrowbooks(username3, newcount);
                     }
                 }
-                isSelected = Convert.ToBoolean(row.Cells["cancelcolumn2"].Value);
+                isSelected = Convert.ToBoolean(row.Cells["cancel"].Value);
                 if (isSelected)
                 {
                     dataGridView3.Rows.Remove(row);
@@ -138,18 +141,18 @@ namespace BookStore
         {
             foreach (DataGridViewRow row in dataGridView2.Rows)
             {
-                bool isSelected = Convert.ToBoolean(row.Cells["approvecolumn3"].Value);
+                bool isSelected = Convert.ToBoolean(row.Cells["Approve"].Value);
                 if (isSelected)
                 {
-                    if (controllerObj.selectcountoftakebooks(log.username()) == 1)
-                        controllerObj.deletetakebook(log.username());
+                    if (controllerObj.selectcountoftakebooks(username3) == 1)
+                        controllerObj.deletetakebook(username3);
                     else
                     {
-                        int newcount = controllerObj.selectcountoftakebooks(log.username()) - 1;
-                        controllerObj.updatecountoftakebooks(log.username(), newcount);
+                        int newcount = controllerObj.selectcountoftakebooks(username3) - 1;
+                        controllerObj.updatecountoftakebooks(username3, newcount);
                     }
                 }
-                isSelected = Convert.ToBoolean(row.Cells["cancelcolumn3"].Value);
+                isSelected = Convert.ToBoolean(row.Cells["cancel"].Value);
                 if (isSelected)
                 {
                     dataGridView2.Rows.Remove(row);

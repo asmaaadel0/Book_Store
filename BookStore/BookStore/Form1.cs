@@ -16,8 +16,8 @@ namespace BookStore
         private Random random;
         private int tempIndex;
         private Form activeForm;
-
-        public Form1()
+        string username;
+        public Form1(string name)
         {
             InitializeComponent();
             random = new Random();
@@ -25,7 +25,11 @@ namespace BookStore
             this.Text = string.Empty;
             //this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            username = name;
         }
+
+
+
 
 
         private Color SelectThemeColor()
@@ -184,7 +188,7 @@ namespace BookStore
 
         private void signupbutton_Click(object sender, EventArgs e)
         {
-            orderedbooksofuser form = new orderedbooksofuser();
+            orderedbooksofuser form = new orderedbooksofuser(username);
             form.Show();
         }
     }
