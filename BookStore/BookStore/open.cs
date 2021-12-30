@@ -51,5 +51,10 @@ namespace BookStore
         {
 
         }
+
+        private void loginlogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

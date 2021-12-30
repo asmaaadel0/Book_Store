@@ -55,6 +55,7 @@ namespace BookStore
             this.loginlogo.Name = "loginlogo";
             this.loginlogo.Size = new System.Drawing.Size(533, 469);
             this.loginlogo.TabIndex = 16;
+            this.loginlogo.Paint += new System.Windows.Forms.PaintEventHandler(this.loginlogo_Paint);
             // 
             // label1
             // 
