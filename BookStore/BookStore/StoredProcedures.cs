@@ -47,5 +47,11 @@ namespace BookStore
         public static string InsertBookToDonate = "InsertBooksToDonate";
         public static string InsertAuthor = "InsertAuthor";
         public static string InsertPublisher = "InsertPublicher";
+        public static string deletebookfromtakefree = "deletebookfromtakefree";
+        public static string deletebookfromborrow = "deletebookfromborrow";
+        public static string deletebookfrombuy = "deletebookfrombuy";
+        public static string isbndonate = "isbndonate";
+        public static string isbnlend = "isbnlend";
+        public static string isbnsell = "isbnsell";
     }
 }

@@ -98,13 +98,14 @@ namespace BookStore
             dataGridView1.Columns[0].Name = "Books to sell";
             dataGridView1.Columns[1].Name = "buyer";
             dataGridView1.Columns[2].Name = "ordered";
-            for (int i = 1; i <= controllerObj.numofrowsofbuybooks(); i++)
+            int j = 0;
+            DataTable dt = controllerObj.sellbooksofuser(username);
+            int x = dt.Rows.Count;
+            for (int i = 1; i <= x; i++)
             {
                 string[] row = new string[] { i.ToString() };
                 dataGridView1.Rows.Add(row);
             }
-            int j = 0;
-            DataTable dt = controllerObj.sellbooksofuser(username);
             foreach (DataRow dr in dt.Rows)
             {
                 dataGridView1.Rows[j].Cells["Books to sell"].Value = dr[0].ToString();
@@ -114,13 +115,14 @@ namespace BookStore
             dataGridView3.Columns[0].Name = "Books to Donate";
             dataGridView3.Columns[1].Name = "taker";
             dataGridView3.Columns[2].Name = "ordered";
-            for (int i = 1; i <= controllerObj.numofrowsofbuybooks(); i++)
+            j = 0;
+            dt = controllerObj.donatebooksofuser(username);
+            x = dt.Rows.Count;
+            for (int i = 1; i <= x; i++)
             {
                 string[] row = new string[] { i.ToString() };
                 dataGridView3.Rows.Add(row);
             }
-            j = 0;
-            dt = controllerObj.donatebooksofuser(username);
             foreach (DataRow dr in dt.Rows)
             {
                 dataGridView3.Rows[j].Cells["Books to Donate"].Value = dr[0].ToString();
@@ -130,13 +132,14 @@ namespace BookStore
             dataGridView2.Columns[0].Name = "Books to Lend";
             dataGridView2.Columns[1].Name = "borrower";
             dataGridView2.Columns[2].Name = "ordered";
-            for (int i = 1; i <= controllerObj.numofrowsofbuybooks(); i++)
+            j = 0;
+            dt = controllerObj.lendbooksofuser(username);
+            x=dt.Rows.Count;
+            for (int i = 1; i <= x; i++)
             {
                 string[] row = new string[] { i.ToString() };
                 dataGridView2.Rows.Add(row);
             }
-            j = 0;
-            dt = controllerObj.lendbooksofuser(username);
             foreach (DataRow dr in dt.Rows)
             {
                 dataGridView2.Rows[j].Cells["Books to lend"].Value = dr[0].ToString();

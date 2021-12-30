@@ -86,26 +86,26 @@ namespace BookStore
             Parameters.Add("@username", username);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
-        public int selectcountofbuyingbooks(string username)
+        public DataTable selectcountofbuyingbooks(string username)
         {
             string StoredProcedureName = StoredProcedures.selectcountofbuyingbooks;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@username", username);
-            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
-        public int selectcountofborrowbooks(string username)
+        public DataTable selectcountofborrowbooks(string username)
         {
             string StoredProcedureName = StoredProcedures.selectcountofborrowbooks;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@username", username);
-            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
-        public int selectcountoftakebooks(string username)
+        public DataTable selectcountoftakebooks(string username)
         {
             string StoredProcedureName = StoredProcedures.selectcountoftakebooks;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@username", username);
-            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
         public int deletebook(string username)
@@ -143,7 +143,7 @@ namespace BookStore
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@newcount", count);
             Parameters.Add("@username", username);
-            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
         public int updatecountoftakebooks(string username, int count)
         {
@@ -313,24 +313,75 @@ namespace BookStore
             Parameters.Add("@title", title);
             return (string)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
-        public int numofrowsofbuybooks()
+        public int deletebookfromtakefree(string username,string ISBN)
         {
-            string StoredProcedureName = StoredProcedures.numofrowsofbuybooks;
+            string StoredProcedureName = StoredProcedures.deletebookfromtakefree;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+            Parameters.Add("@username", username);
+            Parameters.Add("@ISBN", ISBN);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-        public int numofrowsofborrowbooks()
-        {
-            string StoredProcedureName = StoredProcedures.numofrowsofborrowbooks;
-            Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
-        }
-        public int numofrowsoftakebooks()
-        {
-            string StoredProcedureName = StoredProcedures.numofrowsoftakebooks;
-            Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
 
+        public int deletebookfromborrow(string username, string ISBN)
+        {
+            string StoredProcedureName = StoredProcedures.deletebookfromborrow;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            Parameters.Add("@ISBN", ISBN);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+
+        public int deletebookfrombuy(string username, string ISBN)
+        {
+            string StoredProcedureName = StoredProcedures.deletebookfrombuy;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@username", username);
+            Parameters.Add("@ISBN", ISBN);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public string isbndonate(string title)
+        {
+            string StoredProcedureName = StoredProcedures.isbndonate;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@title", title);
+            return (string)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+        }
+
+        public string isbnlend(string title)
+        {
+            string StoredProcedureName = StoredProcedures.isbnlend;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@title", title);
+            return (string)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+        }
+
+        public string isbnsell(string title)
+        {
+            string StoredProcedureName = StoredProcedures.isbnsell;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@title", title);
+            return (string)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+        }
+
+        //public int numofrowsofbuybooks()
+        //{
+        //    string StoredProcedureName = StoredProcedures.numofrowsofbuybooks;
+        //    Dictionary<string, object> Parameters = new Dictionary<string, object>();
+        //    return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+        //}
+        //public int numofrowsofborrowbooks()
+        //{
+        //    string StoredProcedureName = StoredProcedures.numofrowsofborrowbooks;
+        //    Dictionary<string, object> Parameters = new Dictionary<string, object>();
+        //    return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+        //}
+        //public int numofrowsoftakebooks()
+        //{
+        //    string StoredProcedureName = StoredProcedures.numofrowsoftakebooks;
+        //    Dictionary<string, object> Parameters = new Dictionary<string, object>();
+        //    return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+
+        //}
     }
 }

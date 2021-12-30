@@ -39,13 +39,14 @@ namespace BookStore
             dataGridView4.Columns[0].Name = "Books to buy";
             dataGridView4.Columns[1].Name = "cancel";
             dataGridView4.Columns[2].Name = "Approve";
-            for (int i = 1; i <= controllerObj.numofrowsofbuybooks(); i++)
+            int j = 0;
+            DataTable dt = controllerObj.buyingbooksforspecificuser(username3);
+            int x = dt.Rows.Count;
+            for (int i = 1; i <= x; i++)
             {
                 string[] row = new string[] { i.ToString() };
                 dataGridView4.Rows.Add(row);
             }
-            int j = 0;
-            DataTable dt = controllerObj.takenbooksforspecificuser(username3);
             foreach (DataRow dr in dt.Rows)
             {
                 dataGridView4.Rows[j].Cells["Books to buy"].Value = dr[0].ToString();
@@ -55,13 +56,14 @@ namespace BookStore
             dataGridView3.Columns[0].Name = "Books to borrow";
             dataGridView3.Columns[1].Name = "cancel";
             dataGridView3.Columns[2].Name = "Approve";
-            for (int i = 1; i <= controllerObj.numofrowsofbuybooks(); i++)
+            j = 0;
+            dt = controllerObj.borrowingbooksforspecificuser(username3);
+            x = dt.Rows.Count;
+            for (int i = 1; i <=x; i++)
             {
                 string[] row = new string[] { i.ToString() };
                 dataGridView3.Rows.Add(row);
             }
-            j = 0;
-            dt = controllerObj.takenbooksforspecificuser(username3);
             foreach (DataRow dr in dt.Rows)
             {
                 dataGridView3.Rows[j].Cells["Books to borrow"].Value = dr[0].ToString();
@@ -71,13 +73,14 @@ namespace BookStore
             dataGridView2.Columns[0].Name = "Books to Donate";
             dataGridView2.Columns[1].Name = "cancel";
             dataGridView2.Columns[2].Name = "Approve";
-            for (int i = 1; i <= controllerObj.numofrowsofbuybooks(); i++)
+            j = 0;
+            dt = controllerObj.takenbooksforspecificuser(username3);
+            x = dt.Rows.Count;
+            for (int i = 1; i <= x; i++)
             {
                 string[] row = new string[] { i.ToString() };
                 dataGridView2.Rows.Add(row);
             }
-            j = 0;
-            dt = controllerObj.takenbooksforspecificuser(username3);
             foreach (DataRow dr in dt.Rows)
             {
                 dataGridView2.Rows[j].Cells["Books to Donate"].Value = dr[0].ToString();
@@ -90,20 +93,32 @@ namespace BookStore
             foreach (DataGridViewRow row in dataGridView4.Rows)
             {
                 bool isSelected = Convert.ToBoolean(row.Cells["Approve"].Value);
+                DataTable dt = controllerObj.selectcountofbuyingbooks(username3);
+                string n = dt.Rows[0][0].ToString();
+                int x = int.Parse(n);
                 if (isSelected)
                 {
-                    if (controllerObj.selectcountofbuyingbooks(username3) == 1)
+
+                    if (x == 1)
+                    {
+                        MessageBox.Show("your order is approved");
                         controllerObj.deletebook(username3);
+                        dataGridView4.Rows.Remove(row);
+                        return;
+                    }
                     else
                     {
-                        int newcount = controllerObj.selectcountofbuyingbooks(username3) - 1;
+                        int newcount = x - 1;
                         controllerObj.updatecountofbooks(username3, newcount);
+                        MessageBox.Show("your order is approved");
                     }
                 }
                 isSelected = Convert.ToBoolean(row.Cells["cancel"].Value);
                 if (isSelected)
                 {
                     dataGridView4.Rows.Remove(row);
+                    controllerObj.deletebookfrombuy(username3, controllerObj.isbnsell( row.Cells[0].Value.ToString()));
+                    MessageBox.Show("your order is canceled");
                 }
             }
 
@@ -114,20 +129,30 @@ namespace BookStore
             foreach (DataGridViewRow row in dataGridView3.Rows)
             {
                 bool isSelected = Convert.ToBoolean(row.Cells["Approve"].Value);
+                DataTable dt = controllerObj.selectcountofborrowbooks(username3);
+                string n = dt.Rows[0][0].ToString();
+                int x = int.Parse(n);
                 if (isSelected)
                 {
-                    if (controllerObj.selectcountofborrowbooks(username3) == 1)
+                    if (x == 1)
+                    {
                         controllerObj.deleteborrowbook(username3);
+                        dataGridView3.Rows.Remove(row);
+                        return;
+                    }
                     else
                     {
-                        int newcount = controllerObj.selectcountofborrowbooks(username3) - 1;
+                        int newcount = x - 1;
                         controllerObj.updatecountofborrowbooks(username3, newcount);
+                        MessageBox.Show("your order is approved");
                     }
                 }
                 isSelected = Convert.ToBoolean(row.Cells["cancel"].Value);
                 if (isSelected)
                 {
                     dataGridView3.Rows.Remove(row);
+                    controllerObj.deletebookfromborrow(username3, controllerObj.isbnlend(row.Cells[0].Value.ToString()));
+                    MessageBox.Show("your order is canceled");
                 }
             }
         }
@@ -142,20 +167,30 @@ namespace BookStore
             foreach (DataGridViewRow row in dataGridView2.Rows)
             {
                 bool isSelected = Convert.ToBoolean(row.Cells["Approve"].Value);
+                DataTable dt = controllerObj.selectcountoftakebooks(username3);
+                string n = dt.Rows[0][0].ToString();
+                int x = int.Parse(n);
                 if (isSelected)
                 {
-                    if (controllerObj.selectcountoftakebooks(username3) == 1)
+                    if (x == 1)
+                    {
                         controllerObj.deletetakebook(username3);
+                        dataGridView2.Rows.Remove(row);
+                        return;
+                    }
                     else
                     {
-                        int newcount = controllerObj.selectcountoftakebooks(username3) - 1;
+                        int newcount = x - 1;
                         controllerObj.updatecountoftakebooks(username3, newcount);
+                        MessageBox.Show("your order is approved");
                     }
                 }
                 isSelected = Convert.ToBoolean(row.Cells["cancel"].Value);
                 if (isSelected)
                 {
                     dataGridView2.Rows.Remove(row);
+                    controllerObj.deletebookfromtakefree(username3, controllerObj.isbndonate(row.Cells[0].Value.ToString()));
+                    MessageBox.Show("your order is canceled");
                 }
             }
         }
