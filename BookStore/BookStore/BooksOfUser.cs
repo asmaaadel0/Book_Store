@@ -99,51 +99,78 @@ namespace BookStore
             dataGridView1.Columns[1].Name = "buyer";
             dataGridView1.Columns[2].Name = "ordered";
             int j = 0;
+            int x = 0;
             DataTable dt = controllerObj.sellbooksofuser(username);
-            int x = dt.Rows.Count;
-            for (int i = 1; i <= x; i++)
+            DataTable dt2 = controllerObj.donatebooksofuser(username);
+            DataTable dt3 = controllerObj.lendbooksofuser(username);
+            if(dt==null&&dt2==null&&dt3==null)
             {
-                string[] row = new string[] { i.ToString() };
-                dataGridView1.Rows.Add(row);
+                MessageBox.Show("you haven't any books to show");
+                return;
             }
-            foreach (DataRow dr in dt.Rows)
+            if(dt==null)
             {
-                dataGridView1.Rows[j].Cells["Books to sell"].Value = dr[0].ToString();
-                j++;
+                MessageBox.Show("you haven't books to sell");
+            }
+            if(dt!=null)
+            {
+                x = dt.Rows.Count;
+                for (int i = 1; i <= x; i++)
+                {
+                    string[] row = new string[] { i.ToString() };
+                    dataGridView1.Rows.Add(row);
+                }
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dataGridView1.Rows[j].Cells["Books to sell"].Value = dr[0].ToString();
+                    j++;
+                }
             }
             dataGridView3.ColumnCount = 3;
             dataGridView3.Columns[0].Name = "Books to Donate";
             dataGridView3.Columns[1].Name = "taker";
             dataGridView3.Columns[2].Name = "ordered";
             j = 0;
-            dt = controllerObj.donatebooksofuser(username);
-            x = dt.Rows.Count;
-            for (int i = 1; i <= x; i++)
+            if (dt2 == null)
             {
-                string[] row = new string[] { i.ToString() };
-                dataGridView3.Rows.Add(row);
+                MessageBox.Show("you haven't books to sell");
             }
-            foreach (DataRow dr in dt.Rows)
+            if(dt2!=null)
             {
-                dataGridView3.Rows[j].Cells["Books to Donate"].Value = dr[0].ToString();
-                j++;
+                x = dt2.Rows.Count;
+                for (int i = 1; i <= x; i++)
+                {
+                    string[] row = new string[] { i.ToString() };
+                    dataGridView3.Rows.Add(row);
+                }
+                foreach (DataRow dr in dt2.Rows)
+                {
+                    dataGridView3.Rows[j].Cells["Books to Donate"].Value = dr[0].ToString();
+                    j++;
+                }
             }
             dataGridView2.ColumnCount = 3;
             dataGridView2.Columns[0].Name = "Books to Lend";
             dataGridView2.Columns[1].Name = "borrower";
             dataGridView2.Columns[2].Name = "ordered";
             j = 0;
-            dt = controllerObj.lendbooksofuser(username);
-            x=dt.Rows.Count;
-            for (int i = 1; i <= x; i++)
+            if (dt3 == null)
             {
-                string[] row = new string[] { i.ToString() };
-                dataGridView2.Rows.Add(row);
+                MessageBox.Show("you haven't books to sell");
             }
-            foreach (DataRow dr in dt.Rows)
+            if(dt3!=null)
             {
-                dataGridView2.Rows[j].Cells["Books to lend"].Value = dr[0].ToString();
-                j++;
+                x = dt3.Rows.Count;
+                for (int i = 1; i <= x; i++)
+                {
+                    string[] row = new string[] { i.ToString() };
+                    dataGridView2.Rows.Add(row);
+                }
+                foreach (DataRow dr in dt3.Rows)
+                {
+                    dataGridView2.Rows[j].Cells["Books to lend"].Value = dr[0].ToString();
+                    j++;
+                }
             }
         }
     }

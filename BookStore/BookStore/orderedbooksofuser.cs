@@ -40,52 +40,80 @@ namespace BookStore
             dataGridView4.Columns[1].Name = "cancel";
             dataGridView4.Columns[2].Name = "Approve";
             int j = 0;
+            int x = 0;
             DataTable dt = controllerObj.buyingbooksforspecificuser(username3);
-            int x = dt.Rows.Count;
-            for (int i = 1; i <= x; i++)
+            DataTable dt2 = controllerObj.borrowingbooksforspecificuser(username3);
+            DataTable dt3 = controllerObj.takenbooksforspecificuser(username3);
+            if(dt==null&&dt2==null&&dt3==null)
             {
-                string[] row = new string[] { i.ToString() };
-                dataGridView4.Rows.Add(row);
+                MessageBox.Show("you haven't any order");
+                return;
             }
-            foreach (DataRow dr in dt.Rows)
+            if (dt==null)
             {
-                dataGridView4.Rows[j].Cells["Books to buy"].Value = dr[0].ToString();
-                j++;
+                MessageBox.Show("you haven't any order to buy");
+            }
+            if (dt != null)
+            {
+                x = dt.Rows.Count;
+                for (int i = 1; i <= x; i++)
+                {
+                    string[] row = new string[] { i.ToString() };
+                    dataGridView4.Rows.Add(row);
+                }
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dataGridView4.Rows[j].Cells["Books to buy"].Value = dr[0].ToString();
+                    j++;
+                }
             }
             dataGridView3.ColumnCount = 3;
             dataGridView3.Columns[0].Name = "Books to borrow";
             dataGridView3.Columns[1].Name = "cancel";
             dataGridView3.Columns[2].Name = "Approve";
             j = 0;
-            dt = controllerObj.borrowingbooksforspecificuser(username3);
-            x = dt.Rows.Count;
-            for (int i = 1; i <=x; i++)
+            if (dt2 == null)
             {
-                string[] row = new string[] { i.ToString() };
-                dataGridView3.Rows.Add(row);
+                MessageBox.Show("you haven't any order to borrow");
             }
-            foreach (DataRow dr in dt.Rows)
+            if(dt2!=null)
             {
-                dataGridView3.Rows[j].Cells["Books to borrow"].Value = dr[0].ToString();
-                j++;
+                x = dt2.Rows.Count;
+                for (int i = 1; i <= x; i++)
+                {
+                    string[] row = new string[] { i.ToString() };
+                    dataGridView3.Rows.Add(row);
+                }
+                foreach (DataRow dr in dt2.Rows)
+                {
+                    dataGridView3.Rows[j].Cells["Books to borrow"].Value = dr[0].ToString();
+                    j++;
+                }
             }
             dataGridView2.ColumnCount = 3;
             dataGridView2.Columns[0].Name = "Books to Donate";
             dataGridView2.Columns[1].Name = "cancel";
             dataGridView2.Columns[2].Name = "Approve";
             j = 0;
-            dt = controllerObj.takenbooksforspecificuser(username3);
-            x = dt.Rows.Count;
-            for (int i = 1; i <= x; i++)
+            if (dt3 == null)
             {
-                string[] row = new string[] { i.ToString() };
-                dataGridView2.Rows.Add(row);
+                MessageBox.Show("you haven't any order to donate");
             }
-            foreach (DataRow dr in dt.Rows)
+            if(dt3!=null)
             {
-                dataGridView2.Rows[j].Cells["Books to Donate"].Value = dr[0].ToString();
-                j++;
+                x = dt3.Rows.Count;
+                for (int i = 1; i <= x; i++)
+                {
+                    string[] row = new string[] { i.ToString() };
+                    dataGridView2.Rows.Add(row);
+                }
+                foreach (DataRow dr in dt3.Rows)
+                {
+                    dataGridView2.Rows[j].Cells["Books to Donate"].Value = dr[0].ToString();
+                    j++;
+                }
             }
+
         }
 
         private void showbookstosell_Click(object sender, EventArgs e)
