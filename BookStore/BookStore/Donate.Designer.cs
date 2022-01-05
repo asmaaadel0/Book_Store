@@ -42,8 +42,7 @@
             this.BookCover = new System.Windows.Forms.Label();
             this.DInsertAuthorInformation = new System.Windows.Forms.Button();
             this.UploadBookCover = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.DPD = new System.Windows.Forms.TextBox();
+            this.DBT = new System.Windows.Forms.TextBox();
             this.DNU = new System.Windows.Forms.TextBox();
             this.DNoE = new System.Windows.Forms.TextBox();
             this.DIatB = new System.Windows.Forms.TextBox();
@@ -53,6 +52,7 @@
             this.DNoB = new System.Windows.Forms.TextBox();
             this.DNoBP = new System.Windows.Forms.TextBox();
             this.DpictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DPD = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.DpictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,20 +184,14 @@
             this.UploadBookCover.TabIndex = 14;
             this.UploadBookCover.Text = "Upload Book Cover";
             this.UploadBookCover.UseVisualStyleBackColor = true;
+            this.UploadBookCover.Click += new System.EventHandler(this.UploadBookCover_Click);
             // 
-            // textBox1
+            // DBT
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 15;
-            // 
-            // DPD
-            // 
-            this.DPD.Location = new System.Drawing.Point(232, 260);
-            this.DPD.Name = "DPD";
-            this.DPD.Size = new System.Drawing.Size(100, 20);
-            this.DPD.TabIndex = 16;
+            this.DBT.Location = new System.Drawing.Point(22, 72);
+            this.DBT.Name = "DBT";
+            this.DBT.Size = new System.Drawing.Size(100, 20);
+            this.DBT.TabIndex = 15;
             // 
             // DNU
             // 
@@ -261,14 +255,23 @@
             this.DpictureBox1.Location = new System.Drawing.Point(460, 72);
             this.DpictureBox1.Name = "DpictureBox1";
             this.DpictureBox1.Size = new System.Drawing.Size(127, 111);
+            this.DpictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.DpictureBox1.TabIndex = 26;
             this.DpictureBox1.TabStop = false;
+            // 
+            // DPD
+            // 
+            this.DPD.Location = new System.Drawing.Point(232, 260);
+            this.DPD.Name = "DPD";
+            this.DPD.Size = new System.Drawing.Size(200, 20);
+            this.DPD.TabIndex = 27;
             // 
             // Donate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 387);
+            this.Controls.Add(this.DPD);
             this.Controls.Add(this.DpictureBox1);
             this.Controls.Add(this.DNoBP);
             this.Controls.Add(this.DNoB);
@@ -278,8 +281,7 @@
             this.Controls.Add(this.DIatB);
             this.Controls.Add(this.DNoE);
             this.Controls.Add(this.DNU);
-            this.Controls.Add(this.DPD);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DBT);
             this.Controls.Add(this.UploadBookCover);
             this.Controls.Add(this.DInsertAuthorInformation);
             this.Controls.Add(this.BookCover);
@@ -318,8 +320,7 @@
         private System.Windows.Forms.Label BookCover;
         private System.Windows.Forms.Button DInsertAuthorInformation;
         private System.Windows.Forms.Button UploadBookCover;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox DPD;
+        private System.Windows.Forms.TextBox DBT;
         private System.Windows.Forms.TextBox DNU;
         private System.Windows.Forms.TextBox DNoE;
         private System.Windows.Forms.TextBox DIatB;
@@ -329,5 +330,6 @@
         private System.Windows.Forms.TextBox DNoB;
         private System.Windows.Forms.TextBox DNoBP;
         private System.Windows.Forms.PictureBox DpictureBox1;
+        private System.Windows.Forms.DateTimePicker DPD;
     }
 }

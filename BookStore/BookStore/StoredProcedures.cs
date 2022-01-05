@@ -53,5 +53,9 @@ namespace BookStore
         public static string isbndonate = "isbndonate";
         public static string isbnlend = "isbnlend";
         public static string isbnsell = "isbnsell";
+        public static string Updatebooktolend = "updatebooktolend";
+        public static string Updatebooktosell = "updatebooktosell";
+        public static string Updatebooktodonate = "updatebooktodonate";
+
     }
 }
