@@ -39,7 +39,6 @@
             this.BookLanguage = new System.Windows.Forms.Label();
             this.NumberofEdition = new System.Windows.Forms.Label();
             this.PriceofaBook = new System.Windows.Forms.Label();
-            this.UserName = new System.Windows.Forms.Label();
             this.PublishingDate = new System.Windows.Forms.Label();
             this.SNatB = new System.Windows.Forms.TextBox();
             this.SNoE = new System.Windows.Forms.TextBox();
@@ -50,7 +49,6 @@
             this.SISPN = new System.Windows.Forms.TextBox();
             this.SBookTitle = new System.Windows.Forms.TextBox();
             this.SPoaB = new System.Windows.Forms.TextBox();
-            this.SUserName = new System.Windows.Forms.TextBox();
             this.SInsertAuthorInformation = new System.Windows.Forms.Button();
             this.SpictureBox1 = new System.Windows.Forms.PictureBox();
             this.SUploadBookCover = new System.Windows.Forms.Button();
@@ -159,15 +157,6 @@
             this.PriceofaBook.TabIndex = 10;
             this.PriceofaBook.Text = "Price of a Book";
             // 
-            // UserName
-            // 
-            this.UserName.AutoSize = true;
-            this.UserName.Location = new System.Drawing.Point(185, 200);
-            this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(60, 13);
-            this.UserName.TabIndex = 11;
-            this.UserName.Text = "User Name";
-            // 
             // PublishingDate
             // 
             this.PublishingDate.AutoSize = true;
@@ -242,13 +231,6 @@
             this.SPoaB.Size = new System.Drawing.Size(100, 20);
             this.SPoaB.TabIndex = 22;
             // 
-            // SUserName
-            // 
-            this.SUserName.Location = new System.Drawing.Point(188, 216);
-            this.SUserName.Name = "SUserName";
-            this.SUserName.Size = new System.Drawing.Size(100, 20);
-            this.SUserName.TabIndex = 24;
-            // 
             // SInsertAuthorInformation
             // 
             this.SInsertAuthorInformation.Location = new System.Drawing.Point(188, 311);
@@ -295,7 +277,6 @@
             this.Controls.Add(this.SUploadBookCover);
             this.Controls.Add(this.SpictureBox1);
             this.Controls.Add(this.SInsertAuthorInformation);
-            this.Controls.Add(this.SUserName);
             this.Controls.Add(this.SPoaB);
             this.Controls.Add(this.SBookTitle);
             this.Controls.Add(this.SISPN);
@@ -306,7 +287,6 @@
             this.Controls.Add(this.SNoE);
             this.Controls.Add(this.SNatB);
             this.Controls.Add(this.PublishingDate);
-            this.Controls.Add(this.UserName);
             this.Controls.Add(this.PriceofaBook);
             this.Controls.Add(this.NumberofEdition);
             this.Controls.Add(this.BookLanguage);
@@ -339,7 +319,6 @@
         private System.Windows.Forms.Label BookLanguage;
         private System.Windows.Forms.Label NumberofEdition;
         private System.Windows.Forms.Label PriceofaBook;
-        private System.Windows.Forms.Label UserName;
         private System.Windows.Forms.Label PublishingDate;
         private System.Windows.Forms.TextBox SNatB;
         private System.Windows.Forms.TextBox SNoE;
@@ -350,7 +329,6 @@
         private System.Windows.Forms.TextBox SISPN;
         private System.Windows.Forms.TextBox SBookTitle;
         private System.Windows.Forms.TextBox SPoaB;
-        private System.Windows.Forms.TextBox SUserName;
         private System.Windows.Forms.Button SInsertAuthorInformation;
         private System.Windows.Forms.PictureBox SpictureBox1;
         private System.Windows.Forms.Button SUploadBookCover;

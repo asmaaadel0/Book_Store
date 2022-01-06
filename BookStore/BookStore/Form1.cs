@@ -117,7 +117,7 @@ namespace BookStore
 
         private void SellBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new sell(), sender);
+            OpenChildForm(new sell(username), sender);
             mybooksbutton.Hide();
             orderedbooksbutton.Hide();
         }

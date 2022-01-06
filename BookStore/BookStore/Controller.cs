@@ -156,7 +156,27 @@ namespace BookStore
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
-        public int InsertBookToSell(string isbn, string title, string category,string img,int bookcount,int numofpages,string lang,int editionnum,string information,string publishingD,string username,int price)
+        public DataTable SelectPblisherID(string Email)
+        {
+            string StoredProcedureName = StoredProcedures.SelectPublisherID;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Email", Email);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+
+        public DataTable SelectAuthorID(string Fname,string Lname ,DateTime DateOfB,string CityOfB ,string Nat ,string Inf)
+        {
+            string StoredProcedureName = StoredProcedures.SelectAuthorID;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@DateOfBirth", DateOfB);
+            Parameters.Add("@CityOfBirth", CityOfB);
+            Parameters.Add("@Nationality", Nat);
+            Parameters.Add("@A_Information", Inf);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public int InsertBookToSell(string isbn, string title, string category,string img,int bookcount,int numofpages,string lang,int editionnum,string information,DateTime publishingD,string username,int price)
         {
 
             string StoredProcedureName = StoredProcedures.InsertBookToSell;
@@ -177,8 +197,8 @@ namespace BookStore
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
-       
-        public int InsertBookToDonate(string isbn, string title, string category,string img,  int bookcount, int numofpages, string lang, int editionnum, string information, string publishingD, string username)
+
+        public int InsertBookToDonate(string isbn, string title, string category, string img, int bookcount, int numofpages, string lang, int editionnum, string information, DateTime publishingD, string username)
         {
 
             string StoredProcedureName = StoredProcedures.InsertBookToDonate;
@@ -199,7 +219,7 @@ namespace BookStore
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
-        public int InsertBookToLend(string isbn, string title, string category,string img,  int bookcount, int numofpages, string lang, int editionnum, string information, string publishingD, string username, int period)
+        public int InsertBookToLend(string isbn, string title, string category, string img, int bookcount, int numofpages, string lang, int editionnum, string information, DateTime publishingD, string username, int period)
         {
 
             string StoredProcedureName = StoredProcedures.InsertBookToLend;
@@ -220,25 +240,25 @@ namespace BookStore
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
-        public int InsertAuthor(string Fname,string Lname,int Author_ID,string DateOfBirth,string CityOfBirth,string Nationality,string A_Information)
+        public int InsertAuthor(string Fname, string Lname, DateTime DateOfBirth, string CityOfBirth, string Nationality, string A_Information)
         {
             string storedProcedurename = StoredProcedures.InsertAuthor;
             Dictionary<string, object> Parameters=new Dictionary<string,object>();
             Parameters.Add("@Fname",Fname);
             Parameters.Add("@Lname",Lname);
-            Parameters.Add("@Author_ID",Author_ID);
+           
             Parameters.Add("@DateOfBirth",DateOfBirth);
             Parameters.Add("@CityOfBirth", CityOfBirth);
             Parameters.Add("@Nationality", Nationality);
             Parameters.Add("@A_Information", A_Information);
             return dbMan.ExecuteNonQuery(storedProcedurename, Parameters);
         }
-        public int InsertPublisher(int Publisher_ID, string Publisher_name, string Email, string P_Information, string Fax ,string img)
+        public int InsertPublisher( string Publisher_name, string Email, string P_Information, string Fax ,string img)
        
         {
             string storedProcedurename = StoredProcedures.InsertPublisher;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            Parameters.Add("@Publisher_ID", Publisher_ID);
+            
             Parameters.Add("@Publisher_name", Publisher_name);
             Parameters.Add("@Email", Email);
             Parameters.Add("@P_Information", P_Information);
@@ -246,7 +266,28 @@ namespace BookStore
             Parameters.Add("@Logo", img);
             return dbMan.ExecuteNonQuery(storedProcedurename, Parameters);
         }
-
+        public int InsertPublisherAddress(int pid,string state,string distinct,string city,string street,int hn)
+        {
+            string storedProcedurename = StoredProcedures.InsertPublisherAddress;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@P_ID", pid);
+            Parameters.Add("@P_State", state);
+            Parameters.Add("@P_City", city);
+            Parameters.Add("@P_Distinct", distinct);
+            Parameters.Add("@P_Street", street);
+            Parameters.Add("@P_HouseNumber", hn);
+            return dbMan.ExecuteNonQuery(storedProcedurename, Parameters);
+        }
+        public int InsertPublisherPhoneNumber(int pid, string code, string phone)
+        {
+            string storedProcedurename = StoredProcedures.InsertPublisherPhoneNumber;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@P_ID", pid);
+            Parameters.Add("@countrycode", code);
+            Parameters.Add("@PhoneNumber", phone);
+            
+            return dbMan.ExecuteNonQuery(storedProcedurename, Parameters);
+        }
         public int Updatebooktolend(int P_ID, string uname, string ispn, int Aid)
         {
             string storedProcedurename = StoredProcedures.Updatebooktolend;
@@ -273,7 +314,7 @@ namespace BookStore
         {
             string storedProcedurename = StoredProcedures.Updatebooktosell;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            Parameters.Add("@ISPN", ispn);
+            Parameters.Add("@ISBN", ispn);
             Parameters.Add("@username", uname);
             Parameters.Add("@A_ID", Aid);
             Parameters.Add("@P_ID", P_ID);

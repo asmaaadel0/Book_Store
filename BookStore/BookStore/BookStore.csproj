@@ -162,6 +162,12 @@
     <Compile Include="Publisher.Designer.cs">
       <DependentUpon>Publisher.cs</DependentUpon>
     </Compile>
+    <Compile Include="PublisherAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PublisherAddress.Designer.cs">
+      <DependentUpon>PublisherAddress.cs</DependentUpon>
+    </Compile>
     <Compile Include="sell.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     <EmbeddedResource Include="Publisher.resx">
       <DependentUpon>Publisher.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PublisherAddress.resx">
+      <DependentUpon>PublisherAddress.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sell.resx">
       <DependentUpon>sell.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +283,8 @@
   <ItemGroup>
     <None Include="Resources\book2.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

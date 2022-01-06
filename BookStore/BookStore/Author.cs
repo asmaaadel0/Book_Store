@@ -33,7 +33,10 @@ namespace BookStore
         private void button1_Click(object sender, EventArgs e)
         {
             
-            c.InsertAuthor(AAFN.Text, AALN.Text, Aid, dateTimePicker1.Text, AACOB.Text, AAN.Text, AAA.Text);
+            c.InsertAuthor(AAFN.Text, AALN.Text,Convert.ToDateTime(dateTimePicker1.Text), AACOB.Text, AAN.Text, AAA.Text);
+            DataTable dt=c.SelectAuthorID(AAFN.Text, AALN.Text, Convert.ToDateTime(dateTimePicker1.Text), AACOB.Text, AAN.Text, AAA.Text);
+            DataRow r = dt.Rows[0];
+            Aid = (int)r["Author_ID"];
             if (P == null)
             {
                 P = new Publisher(us,ispn,Aid);

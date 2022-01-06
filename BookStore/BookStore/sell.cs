@@ -15,11 +15,20 @@ namespace BookStore
         Controller c;
         string p;
         Author a ;
+        string name;
       public bool ss;
         public sell()
         {
             c=new Controller();
             InitializeComponent();
+            ss = true;
+        }
+        public sell(string n)
+        {
+            name = n;
+            c = new Controller();
+            InitializeComponent();
+            ss = true;
         }
        
         private void label1_Click(object sender, EventArgs e)
@@ -37,7 +46,7 @@ namespace BookStore
             
             if (a == null)
             {
-                a = new Author(SUserName.Text, SISPN.Text);
+                a = new Author(name, SISPN.Text);
                 a.Show();
             }
             else
@@ -52,8 +61,9 @@ namespace BookStore
            bool f4 = int.TryParse(SNumberofBookPages.Text,out v4);
            if (f1&&f2&&f3&&f4)
            {
-               c.InsertBookToSell(SISPN.Text, SBookTitle.Text, SBookCategory.Text, p, v2, v4, SBookLanguage.Text, v3, SNatB.Text, SPD.Text, SUserName.Text, v1);
-               ss = true;
+               c.InsertBookToSell(SISPN.Text, SBookTitle.Text, SBookCategory.Text, p, v2, v4, SBookLanguage.Text, v3, SNatB.Text,Convert.ToDateTime( SPD.Text), name, v1);
+              
+
            }
           
         }
@@ -63,11 +73,20 @@ namespace BookStore
             
             OpenFileDialog of = new OpenFileDialog();
             of.Filter = "Images|*.jpg;*.png;*.gif;*.bmp";
-            of.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            if (of.ShowDialog() == DialogResult.OK)
+            of.InitialDirectory ="C:\\";
+            of.FilterIndex = 1;
+            if (of.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                p = Application.StartupPath;
-                SpictureBox1.Image = Image.FromFile(of.FileName);
+                if (of.CheckFileExists)
+                {
+                    p = Application.StartupPath.Substring(0,Application.StartupPath.Length-10);
+                    string cfn = System.IO.Path.GetFileName(of.FileName);
+                    System.IO.File.Copy(of.FileName, p + "\\img\\" + cfn + SBookTitle.Text);
+                    SpictureBox1.Image = Image.FromFile(of.FileName);
+                    MessageBox.Show("succefully uploaded");
+                    p = "\\img\\" + cfn + SBookTitle.Text;
+                }
+            
             }
             
         }

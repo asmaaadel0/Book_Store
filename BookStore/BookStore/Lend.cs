@@ -16,11 +16,19 @@ namespace BookStore
         Author a ;
         string Lp;
       public  bool ls;
+      string name;
         public Lend()
         {
             
             c = new Controller();
             InitializeComponent();
+        }
+        public Lend(string n)
+        {
+            name = n;
+            c = new Controller();
+            InitializeComponent();
+            ls = true;
         }
 
         private void LInsertAuthorInformation_Click(object sender, EventArgs e)
@@ -28,7 +36,7 @@ namespace BookStore
             
             if (a == null)
             {
-                a = new Author(LUserName.Text, LISPN.Text);
+                a = new Author(name, LISPN.Text);
                 a.Show();
             }
             else
@@ -43,7 +51,7 @@ namespace BookStore
             bool f4 = int.TryParse(LNoBP.Text, out v4);
             if (f2 && f3 && f4)
             {
-                c.InsertBookToLend(LISPN.Text, LBT.Text, LBookCategory.Text, Lp, v2, v4, LBookLanguage.Text, v3, LIatB.Text, LPD.Text, LUserName.Text,v1);
+                c.InsertBookToLend(LISPN.Text, LBT.Text, LBookCategory.Text, Lp, v2, v4, LBookLanguage.Text, v3, LIatB.Text,Convert.ToDateTime( LPD.Text), name,v1);
                 ls = true;
             }
         }
@@ -52,11 +60,20 @@ namespace BookStore
         {
             OpenFileDialog of = new OpenFileDialog();
             of.Filter = "Images|*.jpg;*.png;*.gif;*.bmp";
-            of.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            if (of.ShowDialog() == DialogResult.OK)
+            of.InitialDirectory = "C:\\";
+            of.FilterIndex = 1;
+            if (of.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                LpictureBox1.Image = Image.FromFile(of.FileName);
-                Lp = Application.StartupPath;
+                if (of.CheckFileExists)
+                {
+                    Lp = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
+                    string cfn = System.IO.Path.GetFileName(of.FileName) ;
+                    System.IO.File.Copy(of.FileName, Lp +"\\img\\" + cfn + LBT.Text);
+                    LpictureBox1.Image = Image.FromFile(of.FileName);
+                    MessageBox.Show("succefully uploaded");
+                    Lp = Lp + "\\img\\" + cfn + LBT.Text;
+                }
+
             }
         }
     }

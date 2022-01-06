@@ -134,12 +134,13 @@
             this.PIAI.Name = "PIAI";
             this.PIAI.Size = new System.Drawing.Size(153, 23);
             this.PIAI.TabIndex = 12;
-            this.PIAI.Text = "Insert All Informations";
+            this.PIAI.Text = "Insert Publisher information";
             this.PIAI.UseVisualStyleBackColor = true;
             this.PIAI.Click += new System.EventHandler(this.PIAI_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(273, 85);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(127, 111);

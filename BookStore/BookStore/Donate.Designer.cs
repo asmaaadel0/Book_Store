@@ -37,13 +37,11 @@
             this.InformationsabouttheBook = new System.Windows.Forms.Label();
             this.BookLanguage = new System.Windows.Forms.Label();
             this.NumberofEdition = new System.Windows.Forms.Label();
-            this.UserName = new System.Windows.Forms.Label();
             this.PublishingDate = new System.Windows.Forms.Label();
             this.BookCover = new System.Windows.Forms.Label();
             this.DInsertAuthorInformation = new System.Windows.Forms.Button();
             this.UploadBookCover = new System.Windows.Forms.Button();
             this.DBT = new System.Windows.Forms.TextBox();
-            this.DNU = new System.Windows.Forms.TextBox();
             this.DNoE = new System.Windows.Forms.TextBox();
             this.DIatB = new System.Windows.Forms.TextBox();
             this.DBookCategory = new System.Windows.Forms.TextBox();
@@ -139,15 +137,6 @@
             this.NumberofEdition.TabIndex = 9;
             this.NumberofEdition.Text = "Number of Edition";
             // 
-            // UserName
-            // 
-            this.UserName.AutoSize = true;
-            this.UserName.Location = new System.Drawing.Point(229, 195);
-            this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(60, 13);
-            this.UserName.TabIndex = 10;
-            this.UserName.Text = "User Name";
-            // 
             // PublishingDate
             // 
             this.PublishingDate.AutoSize = true;
@@ -192,13 +181,6 @@
             this.DBT.Name = "DBT";
             this.DBT.Size = new System.Drawing.Size(100, 20);
             this.DBT.TabIndex = 15;
-            // 
-            // DNU
-            // 
-            this.DNU.Location = new System.Drawing.Point(232, 211);
-            this.DNU.Name = "DNU";
-            this.DNU.Size = new System.Drawing.Size(100, 20);
-            this.DNU.TabIndex = 17;
             // 
             // DNoE
             // 
@@ -280,13 +262,11 @@
             this.Controls.Add(this.DBookCategory);
             this.Controls.Add(this.DIatB);
             this.Controls.Add(this.DNoE);
-            this.Controls.Add(this.DNU);
             this.Controls.Add(this.DBT);
             this.Controls.Add(this.UploadBookCover);
             this.Controls.Add(this.DInsertAuthorInformation);
             this.Controls.Add(this.BookCover);
             this.Controls.Add(this.PublishingDate);
-            this.Controls.Add(this.UserName);
             this.Controls.Add(this.NumberofEdition);
             this.Controls.Add(this.BookLanguage);
             this.Controls.Add(this.InformationsabouttheBook);
@@ -315,13 +295,11 @@
         private System.Windows.Forms.Label InformationsabouttheBook;
         private System.Windows.Forms.Label BookLanguage;
         private System.Windows.Forms.Label NumberofEdition;
-        private System.Windows.Forms.Label UserName;
         private System.Windows.Forms.Label PublishingDate;
         private System.Windows.Forms.Label BookCover;
         private System.Windows.Forms.Button DInsertAuthorInformation;
         private System.Windows.Forms.Button UploadBookCover;
         private System.Windows.Forms.TextBox DBT;
-        private System.Windows.Forms.TextBox DNU;
         private System.Windows.Forms.TextBox DNoE;
         private System.Windows.Forms.TextBox DIatB;
         private System.Windows.Forms.TextBox DBookCategory;

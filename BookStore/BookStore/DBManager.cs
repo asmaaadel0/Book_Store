@@ -10,7 +10,7 @@ namespace BookStore
 {
     public class DBManager
     {
-        static string DB_Connection_String = @"Data Source=ASMAA-ADEL\SQLEXPRESS;Initial Catalog=BookStore;Integrated Security=True";
+        static string DB_Connection_String = @"Data Source=WINDOWS-6CHVBRE;Initial Catalog=BookStore;Integrated Security=True";
         SqlConnection myConnection;
 
         public DBManager()
