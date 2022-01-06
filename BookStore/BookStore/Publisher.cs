@@ -84,10 +84,19 @@ namespace BookStore
             OpenFileDialog of = new OpenFileDialog();
             of.Filter = "Images|*.jpg;*.png;*.gif;*.bmp";
             of.InitialDirectory = "C:\\";
-            if (of.ShowDialog() == DialogResult.OK)
+            of.FilterIndex = 1;
+            if (of.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                path = Application.StartupPath;
-                pictureBox1.Image = Image.FromFile(of.FileName);
+                if (of.CheckFileExists)
+                {
+                    path = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
+                    string cfn = System.IO.Path.GetFileName(of.FileName);
+                    System.IO.File.Copy(of.FileName, path + "\\img\\" + cfn + PPN.Text);
+                    pictureBox1.Image = Image.FromFile(of.FileName);
+                    MessageBox.Show("succefully uploaded");
+                    path = "\\img\\" + cfn + PPN.Text;
+                }
+
             }
         }
     }
