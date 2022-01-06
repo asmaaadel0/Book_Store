@@ -14,11 +14,17 @@ namespace BookStore
     {
         private Form activeForm;
         private Button currentButton;
-
-        public BuyForm()
+        Controller controllerObj;
+        private string username;
+        public BuyForm(string name)
         {
             InitializeComponent();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            username = name;
+            controllerObj = new Controller();
+            DataTable dt = controllerObj.SelectSell();
+            dataGridView1.DataSource = dt;
+            dataGridView1.Refresh();
         }
 
         private void ActivateButton(object btnSender)
@@ -28,7 +34,7 @@ namespace BookStore
                 if (currentButton != (Button)btnSender)
                 {
                     currentButton = (Button)btnSender;
-                    
+
                 }
             }
         }
@@ -44,7 +50,7 @@ namespace BookStore
             this.panel1.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            
+
         }
         private void LoadTheme()
         {
@@ -58,10 +64,14 @@ namespace BookStore
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
             }
-       }
-        private void FormOrders_Load(object sender, EventArgs e)
+        }
+        private void BuyForm_Load(object sender, EventArgs e)
         {
             LoadTheme();
+            controllerObj = new Controller();
+            DataTable dt = controllerObj.SelectSell();
+            dataGridView1.DataSource = dt;
+            dataGridView1.Refresh();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -74,10 +84,6 @@ namespace BookStore
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new BookDetails());
-        }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -86,10 +92,11 @@ namespace BookStore
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                OpenChildForm(new BookDetails());
+                BookDetails bookdetails = new BookDetails(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(), dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(), username);
+                OpenChildForm(bookdetails);
             }
         }
 
-        
+
     }
 }

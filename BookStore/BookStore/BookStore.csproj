@@ -70,6 +70,12 @@
     <Compile Include="Author.Designer.cs">
       <DependentUpon>Author.cs</DependentUpon>
     </Compile>
+    <Compile Include="AuthorInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorInfo.Designer.cs">
+      <DependentUpon>AuthorInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,12 @@
     <Compile Include="orderedbooksofuser.Designer.cs">
       <DependentUpon>orderedbooksofuser.cs</DependentUpon>
     </Compile>
+    <Compile Include="publiherInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="publiherInfo.Designer.cs">
+      <DependentUpon>publiherInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Publisher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Author.resx">
       <DependentUpon>Author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthorInfo.resx">
+      <DependentUpon>AuthorInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookDetails.resx">
       <DependentUpon>BookDetails.cs</DependentUpon>
@@ -232,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="orderedbooksofuser.resx">
       <DependentUpon>orderedbooksofuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="publiherInfo.resx">
+      <DependentUpon>publiherInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Publisher.resx">
       <DependentUpon>Publisher.cs</DependentUpon>

@@ -19,7 +19,7 @@ namespace BookStore
             //Application.Run(new ADMINS());
             //Application.Run(new BuyForm());
             //Application.Run(new Form1("asmaa333"));
-            Application.Run(new home());
+            Application.Run(new Form1("mnn"));
         }
     }
 }

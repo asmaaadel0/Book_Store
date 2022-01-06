@@ -14,11 +14,17 @@ namespace BookStore
     {
         private Form activeForm;
         private Button currentButton;
-
-        public FreeForm()
+        Controller controllerObj;
+        private string username;
+        public FreeForm(string name)
         {
             InitializeComponent();
+            username = name;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            controllerObj = new Controller();
+            DataTable dt = controllerObj.SelectFree();
+            dataGridView1.DataSource = dt;
+            dataGridView1.Refresh();
         }
 
         private void ActivateButton(object btnSender)
@@ -76,7 +82,7 @@ namespace BookStore
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                OpenChildForm(new FreeBookDetails());
+                OpenChildForm(new FreeBookDetails(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(), dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(), username));
             }
 
 

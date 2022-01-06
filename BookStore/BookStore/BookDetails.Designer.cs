@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.Information = new System.Windows.Forms.TextBox();
+            this.AuthorTextBox = new System.Windows.Forms.TextBox();
+            this.PublisherTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,19 +41,19 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.NumPg = new System.Windows.Forms.TextBox();
+            this.LangTextBox = new System.Windows.Forms.TextBox();
+            this.Price = new System.Windows.Forms.TextBox();
+            this.EditionTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ISBNTextBox = new System.Windows.Forms.TextBox();
+            this.Title = new System.Windows.Forms.TextBox();
+            this.categoryTextBox = new System.Windows.Forms.TextBox();
+            this.CountTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,9 +61,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.textBox10);
-            this.panel1.Controls.Add(this.textBox9);
+            this.panel1.Controls.Add(this.Information);
+            this.panel1.Controls.Add(this.AuthorTextBox);
+            this.panel1.Controls.Add(this.PublisherTextBox);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -73,19 +73,19 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.NumPg);
+            this.panel1.Controls.Add(this.LangTextBox);
+            this.panel1.Controls.Add(this.Price);
+            this.panel1.Controls.Add(this.EditionTextBox);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.ISBNTextBox);
+            this.panel1.Controls.Add(this.Title);
+            this.panel1.Controls.Add(this.categoryTextBox);
+            this.panel1.Controls.Add(this.CountTextBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.Black;
@@ -94,42 +94,43 @@
             this.panel1.Size = new System.Drawing.Size(1017, 478);
             this.panel1.TabIndex = 0;
             // 
-            // textBox11
+            // Information
             // 
-            this.textBox11.BackColor = System.Drawing.Color.Silver;
-            this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(13, 338);
-            this.textBox11.MaxLength = 10000;
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(726, 110);
-            this.textBox11.TabIndex = 25;
-            this.textBox11.Text = "BookName";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Information.BackColor = System.Drawing.Color.Silver;
+            this.Information.Enabled = false;
+            this.Information.Location = new System.Drawing.Point(13, 338);
+            this.Information.MaxLength = 10000;
+            this.Information.Multiline = true;
+            this.Information.Name = "Information";
+            this.Information.Size = new System.Drawing.Size(726, 110);
+            this.Information.TabIndex = 25;
+            this.Information.Text = "BookName";
+            this.Information.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox10
+            // AuthorTextBox
             // 
-            this.textBox10.BackColor = System.Drawing.Color.Silver;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(409, 8);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(150, 22);
-            this.textBox10.TabIndex = 24;
-            this.textBox10.Text = "BookName";
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AuthorTextBox.BackColor = System.Drawing.Color.Silver;
+            this.AuthorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AuthorTextBox.Enabled = false;
+            this.AuthorTextBox.Location = new System.Drawing.Point(409, 8);
+            this.AuthorTextBox.Name = "AuthorTextBox";
+            this.AuthorTextBox.Size = new System.Drawing.Size(150, 22);
+            this.AuthorTextBox.TabIndex = 24;
+            this.AuthorTextBox.Text = "BookName";
+            this.AuthorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AuthorTextBox.TextChanged += new System.EventHandler(this.AuthorTextBox_TextChanged);
             // 
-            // textBox9
+            // PublisherTextBox
             // 
-            this.textBox9.BackColor = System.Drawing.Color.Silver;
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(409, 44);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(150, 22);
-            this.textBox9.TabIndex = 23;
-            this.textBox9.Text = "BookName";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PublisherTextBox.BackColor = System.Drawing.Color.Silver;
+            this.PublisherTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PublisherTextBox.Enabled = false;
+            this.PublisherTextBox.Location = new System.Drawing.Point(409, 44);
+            this.PublisherTextBox.Name = "PublisherTextBox";
+            this.PublisherTextBox.Size = new System.Drawing.Size(150, 22);
+            this.PublisherTextBox.TabIndex = 23;
+            this.PublisherTextBox.Text = "BookName";
+            this.PublisherTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
             // 
@@ -217,6 +218,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Publisher Info";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -228,54 +230,55 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "Author Info";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox8
+            // NumPg
             // 
-            this.textBox8.BackColor = System.Drawing.Color.Silver;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(157, 198);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(150, 22);
-            this.textBox8.TabIndex = 12;
-            this.textBox8.Text = "BookName";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NumPg.BackColor = System.Drawing.Color.Silver;
+            this.NumPg.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumPg.Enabled = false;
+            this.NumPg.Location = new System.Drawing.Point(157, 198);
+            this.NumPg.Name = "NumPg";
+            this.NumPg.Size = new System.Drawing.Size(150, 22);
+            this.NumPg.TabIndex = 12;
+            this.NumPg.Text = "BookName";
+            this.NumPg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox7
+            // LangTextBox
             // 
-            this.textBox7.BackColor = System.Drawing.Color.Silver;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(112, 145);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(150, 22);
-            this.textBox7.TabIndex = 11;
-            this.textBox7.Text = "BookName";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LangTextBox.BackColor = System.Drawing.Color.Silver;
+            this.LangTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LangTextBox.Enabled = false;
+            this.LangTextBox.Location = new System.Drawing.Point(112, 145);
+            this.LangTextBox.Name = "LangTextBox";
+            this.LangTextBox.Size = new System.Drawing.Size(150, 22);
+            this.LangTextBox.TabIndex = 11;
+            this.LangTextBox.Text = "BookName";
+            this.LangTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox6
+            // Price
             // 
-            this.textBox6.BackColor = System.Drawing.Color.Silver;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(805, 34);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(150, 22);
-            this.textBox6.TabIndex = 10;
-            this.textBox6.Text = "BookName";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Price.BackColor = System.Drawing.Color.Silver;
+            this.Price.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Price.Enabled = false;
+            this.Price.Location = new System.Drawing.Point(805, 34);
+            this.Price.Name = "Price";
+            this.Price.Size = new System.Drawing.Size(150, 22);
+            this.Price.TabIndex = 10;
+            this.Price.Text = "BookName";
+            this.Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox5
+            // EditionTextBox
             // 
-            this.textBox5.BackColor = System.Drawing.Color.Silver;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(157, 252);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(150, 22);
-            this.textBox5.TabIndex = 9;
-            this.textBox5.Text = "BookName";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.EditionTextBox.BackColor = System.Drawing.Color.Silver;
+            this.EditionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditionTextBox.Enabled = false;
+            this.EditionTextBox.Location = new System.Drawing.Point(157, 252);
+            this.EditionTextBox.Name = "EditionTextBox";
+            this.EditionTextBox.Size = new System.Drawing.Size(150, 22);
+            this.EditionTextBox.TabIndex = 9;
+            this.EditionTextBox.Text = "BookName";
+            this.EditionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -336,53 +339,53 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Nunmber of pages:";
             // 
-            // textBox4
+            // ISBNTextBox
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Silver;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(112, 43);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 22);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.Text = "BookName";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ISBNTextBox.BackColor = System.Drawing.Color.Silver;
+            this.ISBNTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ISBNTextBox.Enabled = false;
+            this.ISBNTextBox.Location = new System.Drawing.Point(112, 43);
+            this.ISBNTextBox.Name = "ISBNTextBox";
+            this.ISBNTextBox.Size = new System.Drawing.Size(150, 22);
+            this.ISBNTextBox.TabIndex = 3;
+            this.ISBNTextBox.Text = "BookName";
+            this.ISBNTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // Title
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Silver;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(112, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 22);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "BookName";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Title.BackColor = System.Drawing.Color.Silver;
+            this.Title.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Title.Enabled = false;
+            this.Title.Location = new System.Drawing.Point(112, 3);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(150, 22);
+            this.Title.TabIndex = 2;
+            this.Title.Text = "BookName";
+            this.Title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // categoryTextBox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Silver;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(112, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 22);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "BookName";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.categoryTextBox.BackColor = System.Drawing.Color.Silver;
+            this.categoryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.categoryTextBox.Enabled = false;
+            this.categoryTextBox.Location = new System.Drawing.Point(112, 99);
+            this.categoryTextBox.Name = "categoryTextBox";
+            this.categoryTextBox.Size = new System.Drawing.Size(150, 22);
+            this.categoryTextBox.TabIndex = 1;
+            this.categoryTextBox.Text = "BookName";
+            this.categoryTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
+            // CountTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Silver;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(805, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 22);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "BookName";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CountTextBox.BackColor = System.Drawing.Color.Silver;
+            this.CountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CountTextBox.Enabled = false;
+            this.CountTextBox.Location = new System.Drawing.Point(805, 75);
+            this.CountTextBox.Name = "CountTextBox";
+            this.CountTextBox.Size = new System.Drawing.Size(150, 22);
+            this.CountTextBox.TabIndex = 0;
+            this.CountTextBox.Text = "BookName";
+            this.CountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BookDetails
             // 
@@ -403,23 +406,23 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CountTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ISBNTextBox;
+        private System.Windows.Forms.TextBox Title;
+        private System.Windows.Forms.TextBox categoryTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox NumPg;
+        private System.Windows.Forms.TextBox LangTextBox;
+        private System.Windows.Forms.TextBox Price;
+        private System.Windows.Forms.TextBox EditionTextBox;
+        private System.Windows.Forms.TextBox Information;
+        private System.Windows.Forms.TextBox AuthorTextBox;
+        private System.Windows.Forms.TextBox PublisherTextBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
