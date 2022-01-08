@@ -10,7 +10,10 @@ namespace BookStore
 {
     public class DBManager
     {
-        static string DB_Connection_String = @"Data Source=localhost;Initial Catalog=BookStore;Integrated Security=True";
+
+        static string DB_Connection_String = @"Data Source=localhost;Initial Catalog=BookStore_0;Integrated Security=True";
+
+
         SqlConnection myConnection;
 
         public DBManager()
@@ -47,6 +50,7 @@ namespace BookStore
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.Message);
                 return 0;
             }
         }

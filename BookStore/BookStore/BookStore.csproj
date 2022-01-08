@@ -88,6 +88,12 @@
     <Compile Include="BooksOfUser.Designer.cs">
       <DependentUpon>BooksOfUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="BorrowAbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowAbook.Designer.cs">
+      <DependentUpon>BorrowAbook.cs</DependentUpon>
+    </Compile>
     <Compile Include="BorrowedBookDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="BorrowForm.Designer.cs">
       <DependentUpon>BorrowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuyAbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyAbook.Designer.cs">
+      <DependentUpon>BuyAbook.cs</DependentUpon>
     </Compile>
     <Compile Include="BuyForm.cs">
       <SubType>Form</SubType>
@@ -174,6 +186,12 @@
     <Compile Include="Publisher.Designer.cs">
       <DependentUpon>Publisher.cs</DependentUpon>
     </Compile>
+    <Compile Include="PublisherAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PublisherAddress.Designer.cs">
+      <DependentUpon>PublisherAddress.cs</DependentUpon>
+    </Compile>
     <Compile Include="sell.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +207,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoredProcedures.cs" />
+    <Compile Include="TakeABook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeABook.Designer.cs">
+      <DependentUpon>TakeABook.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
     <Compile Include="ValidationClass.cs" />
     <EmbeddedResource Include="AdminForms\AddSeminars.resx">
@@ -212,11 +236,17 @@
     <EmbeddedResource Include="BooksOfUser.resx">
       <DependentUpon>BooksOfUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BorrowAbook.resx">
+      <DependentUpon>BorrowAbook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BorrowedBookDetails.resx">
       <DependentUpon>BorrowedBookDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowForm.resx">
       <DependentUpon>BorrowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyAbook.resx">
+      <DependentUpon>BuyAbook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuyForm.resx">
       <DependentUpon>BuyForm.cs</DependentUpon>
@@ -254,6 +284,9 @@
     <EmbeddedResource Include="Publisher.resx">
       <DependentUpon>Publisher.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PublisherAddress.resx">
+      <DependentUpon>PublisherAddress.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sell.resx">
       <DependentUpon>sell.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +303,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TakeABook.resx">
+      <DependentUpon>TakeABook.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -292,6 +328,8 @@
   <ItemGroup>
     <None Include="Resources\book2.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

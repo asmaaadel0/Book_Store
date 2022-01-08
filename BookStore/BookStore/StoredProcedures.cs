@@ -46,13 +46,14 @@ namespace BookStore
         public static string InsertBookToLend = "InsertBooksToLend";
         public static string InsertBookToDonate = "InsertBooksToDonate";
         public static string InsertAuthor = "InsertAuthor";
-        public static string InsertPublisher = "InsertPublicher";
+        public static string InsertPublisher = "InsertPublisher";
         public static string deletebookfromtakefree = "deletebookfromtakefree";
         public static string deletebookfromborrow = "deletebookfromborrow";
         public static string deletebookfrombuy = "deletebookfrombuy";
         public static string isbndonate = "isbndonate";
         public static string isbnlend = "isbnlend";
         public static string isbnsell = "isbnsell";
+
         //DONIA
         public static string SellForm = "SelectToSELL";
         public static string FreeFrm = "SelectToDonate";
@@ -65,7 +66,30 @@ namespace BookStore
         public static string SelectAuthorDate = "SelectAuthorDate";
         public static string SelectPublisherAdresses = "SelectPublisherAdresses";
         public static string SelectPublisherPhone = "SelectPublisherPhone";
+        public static string SelectCities = "SelectCities";
+        public static string SelectCompanyCities = "SelectCompanyCities";
+        //public static string SelectCompanyID = "SelectCompanyID";
+        public static string SellCountD = "SellCountD";
+        public static string LendCountD = "LendCountD";
+        public static string DonateCountD = "DonateCountD";
+        public static string InsertBuyWithoutShipping = "InsertBuyWithoutShipping";
+        public static string InsertBuyShipping = "InsertBuyShipping";
+        public static string InsertBorrowShipping = "InsertBorrowShipping";
+        public static string InsertBorrowWithoutShippping = "InsertBorrowWithoutShippping";
+        public static string InsertTakeWithoutShippping = "InsertTakeWithoutShippping";
+        public static string InsertTakeShippping = "InsertTakeShippping";
+        public static string DecrementCountDonate = "DecrementCountDonate";
+        public static string DecrementCountLend = "DecrementCountLend";
+        public static string DecrementCountSell = "DecrementCountSell";
         
-        
+        //SALMA
+        public static string Updatebooktolend = "updatebooktolend";
+        public static string Updatebooktosell = "updatebooktosell";
+        public static string Updatebooktodonate = "updatebooktodonate";
+        public static string InsertPublisherAddress = "Insertpublisheraddress";
+        public static string InsertPublisherPhoneNumber = "Insertpublisherphonenumber";
+        public static string SelectPublisherID = "selectpublisherid";
+        public static string SelectAuthorID = "Select_Authorid";
+
     }
 }

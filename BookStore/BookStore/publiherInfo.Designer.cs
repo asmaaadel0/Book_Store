@@ -114,7 +114,7 @@
             this.EmailPublisher.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.EmailPublisher.Location = new System.Drawing.Point(105, 149);
             this.EmailPublisher.Name = "EmailPublisher";
-            this.EmailPublisher.Size = new System.Drawing.Size(150, 22);
+            this.EmailPublisher.Size = new System.Drawing.Size(223, 22);
             this.EmailPublisher.TabIndex = 30;
             this.EmailPublisher.Text = "Email";
             this.EmailPublisher.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -135,6 +135,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(578, 179);
             this.dataGridView1.Name = "dataGridView1";
@@ -151,6 +153,8 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(578, 12);
             this.dataGridView2.Name = "dataGridView2";

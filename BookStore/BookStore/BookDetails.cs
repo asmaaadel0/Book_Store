@@ -13,13 +13,17 @@ namespace BookStore
     public partial class BookDetails : Form
     {
         Controller controllerObj;
-        private string username;
+        string username;
+        string seller;
+        string ISBNN;
         DataTable AuthorDT;
         DataTable dt3;
         public BookDetails(string name , string ISBN , string user_name)
         {
             InitializeComponent();
             username = user_name;
+            seller = name;
+            ISBNN = ISBN;
             this.ISBNTextBox.Text = ISBN;
             controllerObj = new Controller();
             DataTable dt = controllerObj.AllSell(name, ISBN);
@@ -47,6 +51,10 @@ namespace BookStore
             Information.Text = dt.Rows[0][8].ToString();
             if (Information.Text == "")
                 Information.Text = "not Available";
+            ///////
+            /*if (dt.Rows[0][3].ToString()!="")
+                pictureBox1.Image = Image.FromFile(@"img\book.jpg");*/
+            //////////
             string AuthorID = dt.Rows[0][12].ToString();
             int x = 0;
             string AuthorName="";
@@ -70,6 +78,10 @@ namespace BookStore
             if (AuthorTextBox.Text == "")
                 AuthorTextBox.Text = "not Available";
 
+            if (AuthorDT == null)
+            {
+                button1.Visible = false;
+            }
             string PublisherID = dt.Rows[0][13].ToString();
             int y= 0;
             string PublisherName = "";
@@ -83,6 +95,10 @@ namespace BookStore
             PublisherTextBox.Text = PublisherName;
             if (PublisherTextBox.Text == "")
                 PublisherTextBox.Text = "not Available";
+            if (dt3 == null)
+            {
+                button2.Visible = false;
+            }
         }
 
         private void BookDetails_Load(object sender, EventArgs e)
@@ -106,6 +122,12 @@ namespace BookStore
         {
             publiherInfo PublishInfo = new publiherInfo(dt3);
             PublishInfo.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            BuyAbook frm = new BuyAbook(username, seller, ISBNN);
+            frm.Show();
         }
     }
 }

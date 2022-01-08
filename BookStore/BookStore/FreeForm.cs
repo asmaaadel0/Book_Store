@@ -82,7 +82,7 @@ namespace BookStore
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                OpenChildForm(new FreeBookDetails(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(), dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(), username));
+                OpenChildForm(new FreeBookDetails(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(), dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(), username));
             }
 
 

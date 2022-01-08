@@ -7,19 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace BookStore
 {
     public partial class FreeBookDetails : Form
     {
         Controller controllerObj;
         private string username;
+        string Donor;
+        string ISBNN;
         DataTable AuthorDT;
         DataTable dt3;
         public FreeBookDetails(string name, string ISBN, string user_name)
         {
             InitializeComponent();
             username = user_name;
+            Donor = name;
+            ISBNN = ISBN;
             this.ISBNTextBox.Text = ISBN;
             controllerObj = new Controller();
             DataTable dt = controllerObj.AllDonate(name, ISBN);
@@ -44,6 +48,13 @@ namespace BookStore
             Information.Text = dt.Rows[0][8].ToString();
             if (Information.Text == "")
                 Information.Text = "not Available";
+            ///////
+            if (dt.Rows[0][3].ToString() != "")
+            {
+                string path = Application.StartupPath.Substring(0, Application.StartupPath.Length - 10);
+                pictureBox1.Image = Image.FromFile(path + dt.Rows[0][3].ToString());
+            }
+            //////////
             string AuthorID = dt.Rows[0][11].ToString();
             int x = 0;
             string AuthorName = "";
@@ -66,7 +77,10 @@ namespace BookStore
             AuthorTextBox.Text = AuthorName;
             if (AuthorTextBox.Text == "")
                 AuthorTextBox.Text = "not Available";
-
+            if (AuthorDT == null)
+            {
+                button1.Visible = false;
+            }
             string PublisherID = dt.Rows[0][12].ToString();
             int y = 0;
             string PublisherName = "";
@@ -80,6 +94,10 @@ namespace BookStore
             PublisherTextBox.Text = PublisherName;
             if (PublisherTextBox.Text == "")
                 PublisherTextBox.Text = "not Available";
+            if (dt3 == null)
+            {
+                button2.Visible = false;
+            }
         }
 
         private void BookDetails_Load(object sender, EventArgs e)
@@ -98,6 +116,12 @@ namespace BookStore
         {
             publiherInfo PublishInfo = new publiherInfo(dt3);
             PublishInfo.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TakeABook frm = new TakeABook(username, Donor, ISBNN);
+            frm.Show();
         }
     }
 }

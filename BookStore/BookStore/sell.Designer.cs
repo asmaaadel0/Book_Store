@@ -39,7 +39,6 @@
             this.BookLanguage = new System.Windows.Forms.Label();
             this.NumberofEdition = new System.Windows.Forms.Label();
             this.PriceofaBook = new System.Windows.Forms.Label();
-            this.UserName = new System.Windows.Forms.Label();
             this.PublishingDate = new System.Windows.Forms.Label();
             this.SNatB = new System.Windows.Forms.TextBox();
             this.SNoE = new System.Windows.Forms.TextBox();
@@ -50,11 +49,10 @@
             this.SISPN = new System.Windows.Forms.TextBox();
             this.SBookTitle = new System.Windows.Forms.TextBox();
             this.SPoaB = new System.Windows.Forms.TextBox();
-            this.SPD = new System.Windows.Forms.TextBox();
-            this.SUserName = new System.Windows.Forms.TextBox();
             this.SInsertAuthorInformation = new System.Windows.Forms.Button();
             this.SpictureBox1 = new System.Windows.Forms.PictureBox();
             this.SUploadBookCover = new System.Windows.Forms.Button();
+            this.SPD = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.SpictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,15 +157,6 @@
             this.PriceofaBook.TabIndex = 10;
             this.PriceofaBook.Text = "Price of a Book";
             // 
-            // UserName
-            // 
-            this.UserName.AutoSize = true;
-            this.UserName.Location = new System.Drawing.Point(185, 200);
-            this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(60, 13);
-            this.UserName.TabIndex = 11;
-            this.UserName.Text = "User Name";
-            // 
             // PublishingDate
             // 
             this.PublishingDate.AutoSize = true;
@@ -233,6 +222,7 @@
             this.SBookTitle.Name = "SBookTitle";
             this.SBookTitle.Size = new System.Drawing.Size(100, 20);
             this.SBookTitle.TabIndex = 21;
+            this.SBookTitle.TextChanged += new System.EventHandler(this.SBookTitle_TextChanged);
             // 
             // SPoaB
             // 
@@ -240,20 +230,6 @@
             this.SPoaB.Name = "SPoaB";
             this.SPoaB.Size = new System.Drawing.Size(100, 20);
             this.SPoaB.TabIndex = 22;
-            // 
-            // SPD
-            // 
-            this.SPD.Location = new System.Drawing.Point(188, 262);
-            this.SPD.Name = "SPD";
-            this.SPD.Size = new System.Drawing.Size(100, 20);
-            this.SPD.TabIndex = 23;
-            // 
-            // SUserName
-            // 
-            this.SUserName.Location = new System.Drawing.Point(188, 216);
-            this.SUserName.Name = "SUserName";
-            this.SUserName.Size = new System.Drawing.Size(100, 20);
-            this.SUserName.TabIndex = 24;
             // 
             // SInsertAuthorInformation
             // 
@@ -271,6 +247,7 @@
             this.SpictureBox1.Location = new System.Drawing.Point(362, 76);
             this.SpictureBox1.Name = "SpictureBox1";
             this.SpictureBox1.Size = new System.Drawing.Size(127, 111);
+            this.SpictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SpictureBox1.TabIndex = 26;
             this.SpictureBox1.TabStop = false;
             // 
@@ -282,17 +259,24 @@
             this.SUploadBookCover.TabIndex = 27;
             this.SUploadBookCover.Text = "Upload Book Cover";
             this.SUploadBookCover.UseVisualStyleBackColor = true;
+            this.SUploadBookCover.Click += new System.EventHandler(this.SUploadBookCover_Click);
+            // 
+            // SPD
+            // 
+            this.SPD.Location = new System.Drawing.Point(188, 262);
+            this.SPD.Name = "SPD";
+            this.SPD.Size = new System.Drawing.Size(200, 20);
+            this.SPD.TabIndex = 28;
             // 
             // sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 382);
+            this.Controls.Add(this.SPD);
             this.Controls.Add(this.SUploadBookCover);
             this.Controls.Add(this.SpictureBox1);
             this.Controls.Add(this.SInsertAuthorInformation);
-            this.Controls.Add(this.SUserName);
-            this.Controls.Add(this.SPD);
             this.Controls.Add(this.SPoaB);
             this.Controls.Add(this.SBookTitle);
             this.Controls.Add(this.SISPN);
@@ -303,7 +287,6 @@
             this.Controls.Add(this.SNoE);
             this.Controls.Add(this.SNatB);
             this.Controls.Add(this.PublishingDate);
-            this.Controls.Add(this.UserName);
             this.Controls.Add(this.PriceofaBook);
             this.Controls.Add(this.NumberofEdition);
             this.Controls.Add(this.BookLanguage);
@@ -336,7 +319,6 @@
         private System.Windows.Forms.Label BookLanguage;
         private System.Windows.Forms.Label NumberofEdition;
         private System.Windows.Forms.Label PriceofaBook;
-        private System.Windows.Forms.Label UserName;
         private System.Windows.Forms.Label PublishingDate;
         private System.Windows.Forms.TextBox SNatB;
         private System.Windows.Forms.TextBox SNoE;
@@ -347,11 +329,10 @@
         private System.Windows.Forms.TextBox SISPN;
         private System.Windows.Forms.TextBox SBookTitle;
         private System.Windows.Forms.TextBox SPoaB;
-        private System.Windows.Forms.TextBox SPD;
-        private System.Windows.Forms.TextBox SUserName;
         private System.Windows.Forms.Button SInsertAuthorInformation;
         private System.Windows.Forms.PictureBox SpictureBox1;
         private System.Windows.Forms.Button SUploadBookCover;
+        private System.Windows.Forms.DateTimePicker SPD;
 
     }
 }

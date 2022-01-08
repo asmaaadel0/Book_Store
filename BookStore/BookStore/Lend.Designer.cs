@@ -35,27 +35,25 @@
             this.BookLanguage = new System.Windows.Forms.Label();
             this.InformationsabouttheBook = new System.Windows.Forms.Label();
             this.PublishingDate = new System.Windows.Forms.Label();
-            this.UserName = new System.Windows.Forms.Label();
             this.NumberofEdition = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.BookTitle = new System.Windows.Forms.Label();
             this.ISPN = new System.Windows.Forms.Label();
             this.BookCategory = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LBT = new System.Windows.Forms.TextBox();
             this.LLendingPeriod = new System.Windows.Forms.TextBox();
             this.LISPN = new System.Windows.Forms.TextBox();
             this.LNoB = new System.Windows.Forms.TextBox();
             this.LBookCategory = new System.Windows.Forms.TextBox();
             this.LBookLanguage = new System.Windows.Forms.TextBox();
             this.LIatB = new System.Windows.Forms.TextBox();
-            this.LUserName = new System.Windows.Forms.TextBox();
-            this.LPD = new System.Windows.Forms.TextBox();
             this.LNoE = new System.Windows.Forms.TextBox();
             this.LNoBP = new System.Windows.Forms.TextBox();
             this.LpictureBox1 = new System.Windows.Forms.PictureBox();
             this.UploadBookCover = new System.Windows.Forms.Button();
             this.LInsertAuthorInformation = new System.Windows.Forms.Button();
             this.BookCover = new System.Windows.Forms.Label();
+            this.LPD = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.LpictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,15 +121,6 @@
             this.PublishingDate.TabIndex = 6;
             this.PublishingDate.Text = "Publishing Date";
             // 
-            // UserName
-            // 
-            this.UserName.AutoSize = true;
-            this.UserName.Location = new System.Drawing.Point(219, 212);
-            this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(60, 13);
-            this.UserName.TabIndex = 7;
-            this.UserName.Text = "User Name";
-            // 
             // NumberofEdition
             // 
             this.NumberofEdition.AutoSize = true;
@@ -176,12 +165,12 @@
             this.BookCategory.TabIndex = 12;
             this.BookCategory.Text = "Book Category";
             // 
-            // textBox1
+            // LBT
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 13;
+            this.LBT.Location = new System.Drawing.Point(24, 78);
+            this.LBT.Name = "LBT";
+            this.LBT.Size = new System.Drawing.Size(100, 20);
+            this.LBT.TabIndex = 13;
             // 
             // LLendingPeriod
             // 
@@ -225,20 +214,6 @@
             this.LIatB.Size = new System.Drawing.Size(100, 20);
             this.LIatB.TabIndex = 19;
             // 
-            // LUserName
-            // 
-            this.LUserName.Location = new System.Drawing.Point(222, 228);
-            this.LUserName.Name = "LUserName";
-            this.LUserName.Size = new System.Drawing.Size(100, 20);
-            this.LUserName.TabIndex = 20;
-            // 
-            // LPD
-            // 
-            this.LPD.Location = new System.Drawing.Point(222, 278);
-            this.LPD.Name = "LPD";
-            this.LPD.Size = new System.Drawing.Size(100, 20);
-            this.LPD.TabIndex = 21;
-            // 
             // LNoE
             // 
             this.LNoE.Location = new System.Drawing.Point(222, 179);
@@ -255,9 +230,11 @@
             // 
             // LpictureBox1
             // 
+            this.LpictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LpictureBox1.Location = new System.Drawing.Point(417, 78);
             this.LpictureBox1.Name = "LpictureBox1";
             this.LpictureBox1.Size = new System.Drawing.Size(127, 111);
+            this.LpictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LpictureBox1.TabIndex = 24;
             this.LpictureBox1.TabStop = false;
             // 
@@ -290,32 +267,37 @@
             this.BookCover.TabIndex = 27;
             this.BookCover.Text = "Book Cover";
             // 
+            // LPD
+            // 
+            this.LPD.Location = new System.Drawing.Point(222, 278);
+            this.LPD.Name = "LPD";
+            this.LPD.Size = new System.Drawing.Size(200, 20);
+            this.LPD.TabIndex = 28;
+            // 
             // Lend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 365);
+            this.Controls.Add(this.LPD);
             this.Controls.Add(this.BookCover);
             this.Controls.Add(this.LInsertAuthorInformation);
             this.Controls.Add(this.UploadBookCover);
             this.Controls.Add(this.LpictureBox1);
             this.Controls.Add(this.LNoBP);
             this.Controls.Add(this.LNoE);
-            this.Controls.Add(this.LPD);
-            this.Controls.Add(this.LUserName);
             this.Controls.Add(this.LIatB);
             this.Controls.Add(this.LBookLanguage);
             this.Controls.Add(this.LBookCategory);
             this.Controls.Add(this.LNoB);
             this.Controls.Add(this.LISPN);
             this.Controls.Add(this.LLendingPeriod);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LBT);
             this.Controls.Add(this.BookCategory);
             this.Controls.Add(this.ISPN);
             this.Controls.Add(this.BookTitle);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.NumberofEdition);
-            this.Controls.Add(this.UserName);
             this.Controls.Add(this.PublishingDate);
             this.Controls.Add(this.InformationsabouttheBook);
             this.Controls.Add(this.BookLanguage);
@@ -340,26 +322,24 @@
         private System.Windows.Forms.Label BookLanguage;
         private System.Windows.Forms.Label InformationsabouttheBook;
         private System.Windows.Forms.Label PublishingDate;
-        private System.Windows.Forms.Label UserName;
         private System.Windows.Forms.Label NumberofEdition;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label BookTitle;
         private System.Windows.Forms.Label ISPN;
         private System.Windows.Forms.Label BookCategory;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox LBT;
         private System.Windows.Forms.TextBox LLendingPeriod;
         private System.Windows.Forms.TextBox LISPN;
         private System.Windows.Forms.TextBox LNoB;
         private System.Windows.Forms.TextBox LBookCategory;
         private System.Windows.Forms.TextBox LBookLanguage;
         private System.Windows.Forms.TextBox LIatB;
-        private System.Windows.Forms.TextBox LUserName;
-        private System.Windows.Forms.TextBox LPD;
         private System.Windows.Forms.TextBox LNoE;
         private System.Windows.Forms.TextBox LNoBP;
         private System.Windows.Forms.PictureBox LpictureBox1;
         private System.Windows.Forms.Button UploadBookCover;
         private System.Windows.Forms.Button LInsertAuthorInformation;
         private System.Windows.Forms.Label BookCover;
+        private System.Windows.Forms.DateTimePicker LPD;
     }
 }
