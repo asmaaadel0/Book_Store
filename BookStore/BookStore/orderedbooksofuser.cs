@@ -15,7 +15,7 @@ namespace BookStore
     {
         Controller controllerObj;
         public login log;
-        private string username3;
+        public string username3;
         public orderedbooksofuser(string name)
         {
             InitializeComponent();

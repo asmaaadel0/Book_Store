@@ -38,13 +38,12 @@
             this.SellBtn = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.orderedbooksbutton = new System.Windows.Forms.Button();
-            this.mybooksbutton = new System.Windows.Forms.Button();
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
+            this.orderedbooksbutton = new System.Windows.Forms.Button();
+            this.mybooksbutton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.panelDesktopPanel.SuspendLayout();
@@ -54,7 +53,6 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.TakeBtn);
             this.panelMenu.Controls.Add(this.BorrowBtn);
             this.panelMenu.Controls.Add(this.BuyBtn);
@@ -206,42 +204,6 @@
             this.panelTitleBar.Size = new System.Drawing.Size(681, 75);
             this.panelTitleBar.TabIndex = 1;
             // 
-            // orderedbooksbutton
-            // 
-            this.orderedbooksbutton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.orderedbooksbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.orderedbooksbutton.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
-            this.orderedbooksbutton.FlatAppearance.BorderSize = 2;
-            this.orderedbooksbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.orderedbooksbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orderedbooksbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderedbooksbutton.ForeColor = System.Drawing.Color.Cyan;
-            this.orderedbooksbutton.Location = new System.Drawing.Point(535, 34);
-            this.orderedbooksbutton.Name = "orderedbooksbutton";
-            this.orderedbooksbutton.Size = new System.Drawing.Size(141, 31);
-            this.orderedbooksbutton.TabIndex = 37;
-            this.orderedbooksbutton.Text = "My Ordered Books";
-            this.orderedbooksbutton.UseVisualStyleBackColor = false;
-            this.orderedbooksbutton.Click += new System.EventHandler(this.signupbutton_Click);
-            // 
-            // mybooksbutton
-            // 
-            this.mybooksbutton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mybooksbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.mybooksbutton.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
-            this.mybooksbutton.FlatAppearance.BorderSize = 2;
-            this.mybooksbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.mybooksbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mybooksbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mybooksbutton.ForeColor = System.Drawing.Color.Cyan;
-            this.mybooksbutton.Location = new System.Drawing.Point(429, 34);
-            this.mybooksbutton.Name = "mybooksbutton";
-            this.mybooksbutton.Size = new System.Drawing.Size(100, 31);
-            this.mybooksbutton.TabIndex = 36;
-            this.mybooksbutton.Text = "My Books";
-            this.mybooksbutton.UseVisualStyleBackColor = false;
-            this.mybooksbutton.Click += new System.EventHandler(this.loginbutton_Click);
-            // 
             // btnCloseChildForm
             // 
             this.btnCloseChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -261,7 +223,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft YaHei", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTitle.Location = new System.Drawing.Point(190, 21);
+            this.lblTitle.Location = new System.Drawing.Point(266, 19);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(119, 45);
             this.lblTitle.TabIndex = 0;
@@ -276,6 +238,40 @@
             this.panelDesktopPanel.Size = new System.Drawing.Size(681, 371);
             this.panelDesktopPanel.TabIndex = 2;
             // 
+            // orderedbooksbutton
+            // 
+            this.orderedbooksbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.orderedbooksbutton.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
+            this.orderedbooksbutton.FlatAppearance.BorderSize = 2;
+            this.orderedbooksbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.orderedbooksbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orderedbooksbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderedbooksbutton.ForeColor = System.Drawing.Color.Cyan;
+            this.orderedbooksbutton.Location = new System.Drawing.Point(535, 34);
+            this.orderedbooksbutton.Name = "orderedbooksbutton";
+            this.orderedbooksbutton.Size = new System.Drawing.Size(141, 31);
+            this.orderedbooksbutton.TabIndex = 37;
+            this.orderedbooksbutton.Text = "My Ordered Books";
+            this.orderedbooksbutton.UseVisualStyleBackColor = false;
+            this.orderedbooksbutton.Click += new System.EventHandler(this.signupbutton_Click);
+            // 
+            // mybooksbutton
+            // 
+            this.mybooksbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.mybooksbutton.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
+            this.mybooksbutton.FlatAppearance.BorderSize = 2;
+            this.mybooksbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.mybooksbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mybooksbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mybooksbutton.ForeColor = System.Drawing.Color.Cyan;
+            this.mybooksbutton.Location = new System.Drawing.Point(429, 34);
+            this.mybooksbutton.Name = "mybooksbutton";
+            this.mybooksbutton.Size = new System.Drawing.Size(100, 31);
+            this.mybooksbutton.TabIndex = 36;
+            this.mybooksbutton.Text = "My Books";
+            this.mybooksbutton.UseVisualStyleBackColor = false;
+            this.mybooksbutton.Click += new System.EventHandler(this.loginbutton_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -284,21 +280,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.Info;
-            this.button1.Location = new System.Drawing.Point(0, 384);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 40);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "LogOut";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -339,7 +320,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button orderedbooksbutton;
         private System.Windows.Forms.Button mybooksbutton;
-        private System.Windows.Forms.Button button1;
     }
 }
 

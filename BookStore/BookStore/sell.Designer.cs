@@ -300,6 +300,7 @@
             this.Controls.Add(this.PleaseEnterThisInformations);
             this.Name = "sell";
             this.Text = "sell";
+            this.Load += new System.EventHandler(this.sell_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SpictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -307,6 +307,7 @@
             this.Controls.Add(this.PleaseEnterThisInformations);
             this.Name = "Lend";
             this.Text = "Lend";
+            this.Load += new System.EventHandler(this.Lend_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LpictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

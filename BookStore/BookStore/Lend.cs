@@ -76,5 +76,10 @@ namespace BookStore
 
             }
         }
+
+        private void Lend_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

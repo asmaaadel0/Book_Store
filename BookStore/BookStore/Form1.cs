@@ -22,7 +22,6 @@ namespace BookStore
             InitializeComponent();
             random = new Random();
             btnCloseChildForm.Visible = false;
-            mybooksbutton.Visible = true;
             this.Text = string.Empty;
             //this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
@@ -119,43 +118,49 @@ namespace BookStore
         private void SellBtn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new sell(username), sender);
+            mybooksbutton.Hide();
+            orderedbooksbutton.Hide();
         }
 
         private void LendBtn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Lend(), sender);
-
+            mybooksbutton.Hide();
+            orderedbooksbutton.Hide();
         }
 
         private void DonateBtn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Donate(), sender);
-           
+            mybooksbutton.Hide();
+            orderedbooksbutton.Hide();
         }
 
         private void OrderBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new BuyForm(username), sender);
-
+            OpenChildForm(new BuyForm(), sender);
+            mybooksbutton.Hide();
+            orderedbooksbutton.Hide();
         }
 
         private void BuyBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new BuyForm(username), sender);
+            OpenChildForm(new BuyForm(), sender);
 
         }
 
         private void BorrowBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new BorrowForm(username), sender);
- 
-
+            OpenChildForm(new BorrowForm(), sender);
+            mybooksbutton.Hide();
+            orderedbooksbutton.Hide();
         }
 
         private void TakeBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FreeForm(username), sender);
-
+            OpenChildForm(new FreeForm(), sender);
+            mybooksbutton.Hide();
+            orderedbooksbutton.Hide();
         }
 
 
@@ -185,13 +190,6 @@ namespace BookStore
         {
             orderedbooksofuser form = new orderedbooksofuser(username);
             form.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            home frm = new home();
-            frm.Show();
-            this.Hide();
         }
     }
 }

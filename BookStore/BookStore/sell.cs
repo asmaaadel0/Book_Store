@@ -95,5 +95,10 @@ namespace BookStore
         {
             
         }
+
+        private void sell_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

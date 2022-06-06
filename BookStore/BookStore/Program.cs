@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
+
 namespace BookStore
 {
     static class Program
@@ -19,13 +19,8 @@ namespace BookStore
             //Application.Run(new ADMINS());
             //Application.Run(new BuyForm());
             //Application.Run(new Form1("asmaa333"));
-            // get directory
-
-            
-            // Read the file as one string. 
-            
-            Application.Run(new login());
-
+            //Application.Run(new Form1("salma"));
+            Application.Run(new home());
         }
     }
 }
