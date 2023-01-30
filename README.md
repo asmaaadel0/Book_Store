@@ -110,9 +110,7 @@
 
 
 
-
-## ✍️ Contributors
-## Contributors <a name = "Contributors"></a>
+## ✍️ Contributors <a name = "Contributors"></a>
 
 <table>
   <tr>
