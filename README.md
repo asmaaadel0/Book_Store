@@ -1,6 +1,6 @@
 <div align="center">
     <h1 align='center'>⚡️<i>Book store</i>⚡️</h1>
-    <p>A desktop application that enables the user to buy, sell, borrow, lend, donate, take for free or order books. the user can also show seminars and shipping companies.</p>
+    <p>A desktop application that enables the user to buy, sell, borrow, lend, donate, take for free or order books. the user can also show seminars and shipping companies. </p>
 </div>
 
 <details open="open">
