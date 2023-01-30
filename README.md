@@ -19,19 +19,19 @@
 
 ---
 
-## 📑 About
+## 📑 About <a name = "about"></a>
 
 - A desktop application that enables the user to buy, sell, borrow, lend, donate, take for free or order books. the user can also show seminars.
 - It is a college project for the data base course. The aim is to apply the basic concepts learnt in the course.
 
 
-## ⛏️ Built with
+## ⛏️ Built with <a name = "built-with"></a>
 
 - C#
 - SQL-server
 
 
-## 📷 screenshots
+## 📷 screenshots <a name = "screenshots"></a>
 
 ![collage (9)](https://user-images.githubusercontent.com/90224487/215482017-7d4cf3da-6ee8-4bad-8a81-7ae257f30864.jpg)
 
@@ -61,7 +61,7 @@
 
 
 
-## 📂 Features
+## 📂 Features <a name = "features"></a>
 
 <details>
 <summary>
